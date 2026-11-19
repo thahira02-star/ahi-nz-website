@@ -699,7 +699,8 @@
     .hero-section {
       position: relative;
       width: 100%;
-      min-height: 505px;
+      height: 560px;
+      min-height: 560px;
       background-color: var(--ahi-navy-primary);
       background-image: 
         linear-gradient(90deg, rgba(10, 24, 45, 0.92) 0%, rgba(10, 24, 45, 0.82) 42%, rgba(10, 24, 45, 0.3) 75%, rgba(10, 24, 45, 0) 100%),
@@ -709,12 +710,54 @@
       background-repeat: no-repeat;
       display: flex;
       align-items: center;
-      padding: 70px 0;
+      padding: 40px 0;
+      box-sizing: border-box;
     }
 
     .hero-content-column {
       max-width: 620px;
       color: var(--ahi-white);
+    }
+
+    .hero-eyebrow-nav {
+      margin-bottom: 18px;
+    }
+
+    .hero-breadcrumb-list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #FFFFFF;
+      line-height: 1.4;
+    }
+
+    .hero-breadcrumb-link {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .hero-breadcrumb-link:hover {
+      color: #FFFFFF;
+      text-decoration: underline;
+    }
+
+    .hero-breadcrumb-sep {
+      color: rgba(255, 255, 255, 0.55);
+      user-select: none;
+      font-size: 13px;
+    }
+
+    .hero-breadcrumb-current {
+      color: #FFFFFF;
+      font-weight: 600;
     }
 
     .hero-heading {
@@ -744,52 +787,66 @@
 
     .btn-hero-primary {
       background-color: var(--ahi-white);
-      color: var(--ahi-navy-primary);
-      font-size: 14px;
+      color: #163865;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14.5px;
       font-weight: 600;
-      height: 44px;
+      height: 46px;
       padding: 0 26px;
       border-radius: var(--radius-sm);
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      gap: 8px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
       transition: all 0.2s ease;
+      text-decoration: none;
     }
 
     .btn-hero-primary:hover {
       background-color: #f1f5f9;
       transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      color: #163865;
     }
 
-    .btn-hero-outline {
-      background: transparent;
-      color: var(--ahi-white);
-      font-size: 14px;
+    .btn-hero-secondary {
+      background: rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14.5px;
       font-weight: 600;
-      height: 44px;
-      padding: 0 22px;
+      height: 46px;
+      padding: 0 26px;
       border-radius: var(--radius-sm);
-      border: 1px solid rgba(255, 255, 255, 0.6);
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
     }
 
-    .btn-hero-outline:hover {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: var(--ahi-white);
+    .btn-hero-secondary:hover {
+      background: rgba(255, 255, 255, 0.25);
+      border-color: rgba(255, 255, 255, 0.65);
+      color: #FFFFFF;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
     }
 
     /* ==========================================================================
        SECTION 02 · WHAT IS EMERGENCY HVAC REPAIR? (LIGHT THEME)
-       Spacing: Exactly 62px vertical spacing
+       Spacing: Exactly 40px vertical spacing
        Reference: what is emergency hvac section.png (Image 1)
        Layout: Image on LEFT, Content & Bullets on RIGHT
        ========================================================================== */
     .section-what-is {
       background-color: var(--ahi-white);
-      padding: 62px 0;
+      padding: 40px 0;
     }
 
     .what-is-grid {
@@ -889,12 +946,12 @@
 
     /* ==========================================================================
        SECTION 03 · HOW IT WORKS (LIGHT THEME)
-       Spacing: Exactly 62px vertical spacing
+       Spacing: Exactly 40px vertical spacing
        Reference: Simple Process / How it works (Image 3)
        ========================================================================== */
     .section-how-it-works {
       background-color: var(--ahi-neutral-bg);
-      padding: 62px 0;
+      padding: 40px 0;
       border-top: 1px solid var(--ahi-border-light);
       border-bottom: 1px solid var(--ahi-border-light);
     }
@@ -995,13 +1052,13 @@
 
     /* ==========================================================================
        SECTION 05 · THE IMPORTANCE OF FAST REPAIR (LIGHT THEME)
-       Spacing: Exactly 62px vertical spacing
+       Spacing: Exactly 40px vertical spacing
        Layout: Heading -> 5 Cards Grid -> Banner (Image on Left, Navy CTA Card on Right)
        Reference: imp of emergency hvac.png & user layout reference
        ========================================================================== */
     .section-importance {
       background-color: var(--ahi-white);
-      padding: 62px 0;
+      padding: 40px 0;
     }
 
     .importance-header {
@@ -1168,12 +1225,12 @@
 
     /* ==========================================================================
        SECTION 04 · COMMON HVAC EMERGENCIES (LIGHT THEME)
-       Spacing: Exactly 62px vertical spacing
+       Spacing: Exactly 40px vertical spacing
        Clean, minimal, uncluttered 6-Card Grid (CTAs removed)
        ========================================================================== */
     .section-emergencies {
       background-color: var(--ahi-white);
-      padding: 0 0 62px 0;
+      padding: 0 0 40px 0;
     }
 
     .emergencies-grid-6col {
@@ -1233,11 +1290,11 @@
 
     /* ==========================================================================
        SECTION 05 · INDUSTRIES WE SUPPORT (LIGHT THEME)
-       Spacing: Exactly 62px vertical spacing
+       Spacing: Exactly 40px vertical spacing
        ========================================================================== */
     .section-industries {
       background-color: var(--ahi-neutral-bg);
-      padding: 62px 0;
+      padding: 40px 0;
       border-top: 1px solid var(--ahi-border-light);
       border-bottom: 1px solid var(--ahi-border-light);
     }
@@ -1306,12 +1363,12 @@
 
     /* ==========================================================================
        SECTION 07 · WHY AHI CARRIER? (LIGHT THEME)
-       Spacing: Exactly 62px vertical spacing
+       Spacing: Exactly 40px vertical spacing
        Reference: reasons to trust.png & actual reference images (Image 2)
        ========================================================================== */
     .section-reasons-trust {
       background-color: var(--ahi-white);
-      padding: 0 0 62px 0;
+      padding: 0 0 40px 0;
     }
 
     .reasons-trust-header {
@@ -1426,10 +1483,10 @@
 
     /* ==========================================================================
        SECTION 07 · REQUEST SERVICE ENQUIRY FORM (LOCKED VISUAL REPLICA)
-       Spacing: Exactly 62px vertical spacing
+       Spacing: Exactly 40px vertical spacing
        ========================================================================== */
     .section-form-wrapper {
-      padding: 62px 0;
+      padding: 40px 0;
       background-color: var(--ahi-form-wrapper);
       border-top: 1px solid var(--ahi-border-light);
       border-bottom: 1px solid var(--ahi-border-light);
@@ -1755,10 +1812,10 @@
 
     /* ==========================================================================
        SECTION 08 · EXPLORE OTHER SERVICES (GLOBAL 4-COL GRID)
-       Spacing: Exactly 62px vertical spacing
+       Spacing: Exactly 40px vertical spacing
        ========================================================================== */
     .section-other-services {
-      padding: 62px 0;
+      padding: 40px 0;
       background-color: var(--ahi-white);
     }
 
@@ -2415,11 +2472,23 @@
   <section class="hero-section" aria-labelledby="hero-main-title">
     <div class="container">
       <div class="hero-content-column">
+        <nav class="hero-eyebrow-nav" aria-label="Breadcrumb">
+          <ol class="hero-breadcrumb-list">
+            <li class="hero-breadcrumb-item"><a href="#" class="hero-breadcrumb-link">Home</a></li>
+            <li class="hero-breadcrumb-sep" aria-hidden="true">/</li>
+            <li class="hero-breadcrumb-item"><a href="#" class="hero-breadcrumb-link">Commercial</a></li>
+            <li class="hero-breadcrumb-sep" aria-hidden="true">/</li>
+            <li class="hero-breadcrumb-item"><a href="#" class="hero-breadcrumb-link">Maintenance &amp; Lifestyle</a></li>
+            <li class="hero-breadcrumb-sep" aria-hidden="true">/</li>
+            <li class="hero-breadcrumb-item hero-breadcrumb-current" aria-current="page">Emergency HVAC Repair</li>
+          </ol>
+        </nav>
         <h1 id="hero-main-title" class="hero-heading">Emergency HVAC Repair</h1>
         <p class="hero-subtitle">When climate control failure threatens operations, patient care, or cold-chain logistics, AHI Carrier dispatches certified master engineers and mobile chiller units within minutes.</p>
         
         <div class="hero-button-cluster">
           <a href="#request-repair" class="btn-hero-primary">Request a Service</a>
+          <a href="#request-repair" class="btn-hero-secondary">Get Free Consultation</a>
         </div>
       </div>
     </div>
@@ -2427,7 +2496,7 @@
 
   <!-- ==========================================================================
        SECTION 02 · WHAT IS EMERGENCY HVAC REPAIR? (LIGHT THEME)
-       Spacing: Exactly 62px vertical spacing
+       Spacing: Exactly 40px vertical spacing
        Reference: what is emergency hvac section.png (Image 1)
        Layout: Image on LEFT, Content & 4 Bullets on RIGHT
        ========================================================================== -->
@@ -2483,7 +2552,7 @@
 
   <!-- ==========================================================================
        SECTION 03 · WHY AHI CARRIER? (LIGHT THEME)
-       Spacing: Exactly 62px vertical spacing
+       Spacing: Exactly 40px vertical spacing
        Reference: reasons to trust.png & Reference files (trust.png, flexibility.png, optimised performance.png) (Image 2)
        ========================================================================== -->
   <section class="section-reasons-trust" aria-labelledby="reasons-heading">
@@ -2591,7 +2660,7 @@
 
   <!-- ==========================================================================
        SECTION 04 · HOW IT WORKS (LIGHT THEME)
-       Spacing: Exactly 62px vertical spacing
+       Spacing: Exactly 40px vertical spacing
        Reference: Simple Process / How it works (Image 3)
        ========================================================================== -->
   <section class="section-how-it-works" aria-labelledby="how-it-works-heading">
@@ -2642,7 +2711,7 @@
 
   <!-- ==========================================================================
        SECTION 05 · THE IMPORTANCE OF FAST REPAIR (LIGHT THEME)
-       Spacing: Exactly 62px vertical spacing
+       Spacing: Exactly 40px vertical spacing
        Layout: Heading -> 5 Cards Grid -> Banner (Image on Left, Navy CTA Card on Right)
        Reference: imp of emergency hvac.png & user layout reference
        ========================================================================== -->
@@ -2739,7 +2808,7 @@
 
   <!-- ==========================================================================
        SECTION 06 · COMMON HVAC EMERGENCIES (LIGHT THEME)
-       Spacing: Exactly 62px vertical spacing
+       Spacing: Exactly 40px vertical spacing
        Clean, minimal, uncluttered 6-Card Grid (CTAs removed, short text)
        ========================================================================== -->
   <section class="section-emergencies" aria-labelledby="emergencies-heading">
@@ -2809,7 +2878,7 @@
 
   <!-- ==========================================================================
        SECTION 07 · INDUSTRIES WE SUPPORT (LIGHT THEME)
-       Spacing: Exactly 62px vertical spacing
+       Spacing: Exactly 40px vertical spacing
        ========================================================================== -->
   <section class="section-industries" aria-labelledby="industries-heading">
     <div class="container">
@@ -2896,7 +2965,7 @@
 
   <!-- ==========================================================================
        SECTION 08 · REQUEST SERVICE ENQUIRY FORM (LOCKED VISUAL REPLICA)
-       Spacing: Exactly 62px vertical spacing
+       Spacing: Exactly 40px vertical spacing
        ========================================================================== -->
   <section class="section-form-wrapper" id="request-repair" aria-labelledby="form-card-title">
     <div class="container">
@@ -3042,7 +3111,7 @@
 
   <!-- ==========================================================================
        SECTION 08 · EXPLORE OTHER SERVICES (GLOBAL 4-COL GRID)
-       Spacing: Exactly 62px vertical spacing
+       Spacing: Exactly 40px vertical spacing
        ========================================================================== -->
   <section class="section-other-services" aria-labelledby="other-services-title">
     <div class="container">
