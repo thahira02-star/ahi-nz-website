@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-NZ">
 <head>
   <meta charset="UTF-8">
@@ -715,7 +715,7 @@
     }
 
     .hero-content-column {
-      max-width: 620px;
+      max-width: 680px;
       color: var(--ahi-white);
     }
 
@@ -775,7 +775,7 @@
       line-height: 1.6;
       color: #E2E8F0;
       margin-bottom: 30px;
-      max-width: 580px;
+      max-width: 650px;
     }
 
     .hero-button-cluster {
@@ -783,6 +783,45 @@
       align-items: center;
       gap: 16px;
       flex-wrap: wrap;
+    }
+
+    /* ==========================================================================
+       SECTION EYEBROWS & LEFT-ALIGNED SECTION HEADERS (CONSISTENCY WITH PDM)
+       ========================================================================== */
+    .section-eyebrow,
+    .what-is-kicker,
+    .reasons-trust-kicker,
+    .how-it-works-kicker,
+    .importance-kicker,
+    .emergencies-kicker,
+    .industries-kicker,
+    .form-panel-kicker,
+    .services-kicker {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #64748B;
+      margin-bottom: 12px;
+      display: inline-block;
+      line-height: 1.2;
+    }
+
+    .section-header-left {
+      text-align: left;
+      margin-bottom: 36px;
+    }
+
+    .section-header-left .section-title-h2 {
+      text-align: left;
+      margin-bottom: 12px;
+    }
+
+    .section-header-left .section-lead-text {
+      margin: 0;
+      max-width: 780px;
+      text-align: left;
     }
 
     .btn-hero-primary {
@@ -851,12 +890,14 @@
 
     .what-is-grid {
       display: grid;
-      grid-template-columns: 1.05fr 1fr;
-      gap: 56px;
+      grid-template-columns: 650px 1fr;
+      gap: 48px;
       align-items: center;
     }
 
     .what-is-photo-wrapper {
+      width: 100%;
+      max-width: 650px;
       border-radius: 5px;
       overflow: hidden;
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
@@ -865,8 +906,9 @@
 
     .what-is-photo-wrapper img {
       width: 100%;
-      height: 420px;
+      height: 430px;
       object-fit: cover;
+      object-position: center 20%;
       display: block;
     }
 
@@ -921,6 +963,7 @@
       line-height: 1.55;
       color: var(--ahi-text-secondary);
       font-weight: 500;
+      white-space: nowrap;
     }
 
     .btn-enquire-now {
@@ -944,10 +987,10 @@
       color: var(--ahi-white);
     }
 
-    /* ==========================================================================
-       SECTION 03 · HOW IT WORKS (LIGHT THEME)
+        /* ==========================================================================
+       SECTION 03 · HOW IT WORKS (VERTICAL TIMELINE · LIGHT THEME)
        Spacing: Exactly 40px vertical spacing
-       Reference: Simple Process / How it works (Image 3)
+       Reference: media_1795074640692_03d3e40b.png (Light Theme Adaptation - Minimal Canvas)
        ========================================================================== */
     .section-how-it-works {
       background-color: var(--ahi-neutral-bg);
@@ -956,100 +999,236 @@
       border-bottom: 1px solid var(--ahi-border-light);
     }
 
-    .how-it-works-header {
-      text-align: center;
-      margin-bottom: 48px;
+    .hiw-timeline-grid {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    /* Left Column: Heading & Subtitle */
+    .hiw-left-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 2px;
+    }
+
+    .how-it-works-kicker {
+      margin-bottom: 8px;
     }
 
     .how-it-works-title {
-      font-size: 34px;
-      font-weight: 600;
+      font-size: 38px;
+      font-weight: 700;
       color: var(--ahi-text-heading);
       letter-spacing: -0.015em;
-      line-height: 1.25;
+      line-height: 1.18;
+      margin-bottom: 14px;
+      text-align: left;
     }
 
-    .how-it-works-process {
+    .how-it-works-desc {
+      font-size: 15.5px;
+      color: var(--ahi-text-secondary);
+      line-height: 1.6;
+      margin-bottom: 0;
+      max-width: 330px;
+      text-align: left;
+    }
+
+    /* Right Column: Timeline track & cards */
+    .hiw-timeline-track {
       position: relative;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-    }
-
-    .how-it-works-process::before {
-      content: "";
-      position: absolute;
-      top: 87px;
-      left: calc(100% / 6 - 13.33px);
-      right: calc(100% / 6 - 13.33px);
-      height: 2px;
-      background: #D9E4EF;
-      z-index: 1;
-      transform: translateY(-50%);
-    }
-
-    .process-step-item {
-      position: relative;
-      z-index: 2;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
+      gap: 16px;
+      padding-left: 48px;
     }
 
-    .process-step-num {
-      font-size: 44px;
-      font-weight: 800;
-      color: #163865;
-      line-height: 1;
-      height: 44px;
+    /* Vertical connector line - precisely centered with circles at x = 18px */
+    .hiw-timeline-track::before {
+      content: '';
+      position: absolute;
+      left: 17px;
+      top: 43px;
+      bottom: 43px;
+      width: 2px;
+      background-color: #CBD5E1;
+      border-radius: 2px;
+      z-index: 1;
+    }
+
+    .hiw-card-wrapper {
+      position: relative;
+    }
+
+    /* Circular node - perfectly centered at x = 18px (48px - 30px = 18px) */
+    .hiw-card-wrapper::before {
+      content: '';
+      position: absolute;
+      left: -30px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #FFFFFF;
+      border: 3.5px solid #163865;
+      box-shadow: 0 0 0 4px #EFF6FF;
+      z-index: 2;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hiw-card-wrapper:hover::before {
+      background-color: #163865;
+      border-color: #FFFFFF;
+      box-shadow: 0 0 0 5px rgba(22, 56, 101, 0.22);
+      transform: translate(-50%, -50%) scale(1.15);
+    }
+
+    /* Horizontal Step Card - Minimal & Professional */
+    .hiw-step-card {
+      background-color: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 20px 26px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      margin-bottom: 14px;
+      justify-content: space-between;
+      gap: 20px;
+      box-shadow: 0 2px 8px -2px rgba(16, 47, 88, 0.04), 0 1px 3px rgba(16, 47, 88, 0.02);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hiw-step-card:hover {
+      border-color: #93C5FD;
+      box-shadow: 0 10px 24px -4px rgba(22, 56, 101, 0.08), 0 4px 8px -2px rgba(22, 56, 101, 0.03);
+      transform: translateX(5px);
+    }
+
+    .hiw-step-left {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .hiw-step-num {
+      font-size: 20px;
+      font-weight: 700;
+      color: #163865;
+      opacity: 0.85;
+      min-width: 28px;
+      font-family: 'Montserrat', sans-serif;
       letter-spacing: -0.02em;
     }
 
-    .process-icon-circle {
-      width: 58px;
-      height: 58px;
+    .hiw-step-icon-badge {
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
-      background-color: #EBF3FB;
-      border: 3px solid #FFFFFF;
-      box-shadow: 0 3px 10px rgba(0, 45, 98, 0.1);
+      background-color: #EFF6FF;
+      border: 1px solid #DBEAFE;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--ahi-navy-primary);
-      margin-bottom: 18px;
-      transition: transform 0.2s ease;
+      flex-shrink: 0;
+      color: #163865;
+      transition: all 0.25s ease;
     }
 
-    .process-step-item:hover .process-icon-circle {
-      transform: scale(1.08);
-      background-color: #DDEEFE;
+    .hiw-step-card:hover .hiw-step-icon-badge {
+      background-color: #163865;
+      color: #FFFFFF;
+      border-color: #163865;
+      transform: scale(1.05);
     }
 
-    .process-icon-circle svg {
-      width: 24px;
-      height: 24px;
+    .hiw-step-icon-badge svg {
+      width: 20px;
+      height: 20px;
     }
 
-    .process-step-title {
-      font-size: 20px;
-      font-weight: 600;
+    .hiw-step-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hiw-step-title {
+      font-size: 16.5px;
+      font-weight: 700;
       color: var(--ahi-text-heading);
-      margin-bottom: 8px;
+      margin: 0 0 3px 0;
       line-height: 1.3;
+      font-family: 'Montserrat', sans-serif;
     }
 
-    .process-step-desc {
-      font-size: 15px;
-      line-height: 1.55;
+    .hiw-step-desc {
+      font-size: 14px;
       color: var(--ahi-text-secondary);
-      max-width: 280px;
+      line-height: 1.5;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
     }
 
+    .hiw-step-badge {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--ahi-text-secondary, #64748B);
+      background: transparent;
+      border: none;
+      padding: 0;
+      border-radius: 0;
+      box-shadow: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+      cursor: default;
+      pointer-events: none;
+      user-select: none;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: -0.01em;
+      transition: color 0.2s ease;
+    }
+
+    .hiw-step-card:hover .hiw-step-badge {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      color: #163865;
+    }
+
+    @media (max-width: 900px) {
+      .hiw-timeline-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .how-it-works-desc {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .hiw-timeline-track {
+        padding-left: 36px;
+      }
+      .hiw-timeline-track::before {
+        left: 11px;
+      }
+      .hiw-card-wrapper::before {
+        left: -24px;
+        width: 14px;
+        height: 14px;
+      }
+      .hiw-step-card {
+        padding: 16px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+      }
+      .hiw-step-badge {
+        align-self: flex-start;
+      }
+    }
     /* ==========================================================================
        SECTION 05 · THE IMPORTANCE OF FAST REPAIR (LIGHT THEME)
        Spacing: Exactly 40px vertical spacing
@@ -1078,7 +1257,7 @@
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 16px;
-      margin-bottom: 32px;
+      margin-bottom: 0;
     }
 
     .importance-card {
@@ -1126,29 +1305,39 @@
       letter-spacing: -0.01em;
     }
 
-    .importance-banner {
-      display: grid;
-      grid-template-columns: 1fr 1.05fr;
-      height: 300px;
-      min-height: 300px;
-      border-radius: 5px;
-      overflow: hidden;
-      box-shadow: var(--shadow-card);
-      border: 1px solid var(--ahi-border-light);
+    /* ==========================================================================
+       SECTION 05B · NATIONWIDE EMERGENCY HVAC DISPATCH (FULL-WIDTH NAVY BANNER)
+       Spacing: Exactly 40px vertical spacing
+       Layout: Full-Width Navy Banner with 2-Column Responsive Grid
+       ========================================================================== */
+    .section-dispatch-banner {
+      width: 100%;
       background-color: #102F58;
+      background-image: linear-gradient(135deg, #102F58 0%, #0A2240 100%);
+      padding: 40px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
     }
 
-    .importance-banner-media {
+    .dispatch-banner-grid {
+      display: grid;
+      grid-template-columns: 460px 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .dispatch-banner-media {
       position: relative;
       width: 100%;
-      height: 100%;
+      height: 310px;
+      border-radius: 10px;
       overflow: hidden;
+      box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.12);
     }
 
-    .importance-banner-img {
-      position: absolute;
-      top: 0;
-      left: 0;
+    .dispatch-banner-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -1156,61 +1345,83 @@
       display: block;
     }
 
-    .importance-banner-content {
-      background-color: #102F58;
-      background-image: linear-gradient(135deg, #102F58 0%, #0d2647 100%);
-      padding: 32px 42px;
+    .dispatch-banner-content {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      color: var(--ahi-white);
-      height: 100%;
+      color: #FFFFFF;
     }
 
-    .importance-banner-heading {
-      font-size: 23px;
-      font-weight: 600;
-      color: var(--ahi-white);
-      line-height: 1.3;
-      margin-bottom: 12px;
-      letter-spacing: -0.01em;
+    .dispatch-banner-eyebrow {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #93C5FD;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-family: 'Montserrat', sans-serif;
     }
 
-    .importance-banner-desc {
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.9);
-      line-height: 1.55;
-      margin-bottom: 20px;
+    .dispatch-banner-heading {
+      font-size: 28px;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+      margin: 0 0 14px 0;
+      font-family: 'Montserrat', sans-serif;
     }
 
-    .importance-banner-actions {
+    .dispatch-banner-desc {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.88);
+      line-height: 1.6;
+      margin: 0 0 24px 0;
+      max-width: 580px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .dispatch-banner-actions {
       display: flex;
       align-items: center;
       gap: 16px;
-      flex-wrap: wrap;
     }
 
-    .btn-importance-cta {
-      background-color: var(--ahi-white);
+    .btn-dispatch-cta {
+      background-color: #FFFFFF;
       color: #163865;
-      font-size: 13.5px;
+      font-size: 14px;
       font-weight: 700;
-      height: 38px;
-      padding: 0 20px;
-      border-radius: 5px;
+      height: 44px;
+      padding: 0 24px;
+      border-radius: 6px;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
-      transition: all 0.2s ease;
+      gap: 9px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
     }
 
-    .btn-importance-cta:hover {
-      background-color: #f1f5f9;
-      transform: translateY(-1px);
-      color: #163865;
+    .btn-dispatch-cta svg {
+      width: 16px;
+      height: 16px;
+      stroke: #163865;
+      stroke-width: 2.5;
+      transition: transform 0.2s ease;
+    }
+
+    .btn-dispatch-cta:hover {
+      background-color: #F8FAFC;
+      color: #0F2744;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+    }
+
+    .btn-dispatch-cta:hover svg {
+      transform: translateX(3px);
     }
 
     .btn-importance-cta svg {
@@ -1230,7 +1441,7 @@
        ========================================================================== */
     .section-emergencies {
       background-color: var(--ahi-white);
-      padding: 0 0 40px 0;
+      padding: 40px 0;
     }
 
     .emergencies-grid-6col {
@@ -1289,7 +1500,7 @@
     }
 
     /* ==========================================================================
-       SECTION 05 · INDUSTRIES WE SUPPORT (LIGHT THEME)
+       SECTION 05 · INDUSTRIES WE SUPPORT (INTERACTIVE SHOWCASE)
        Spacing: Exactly 40px vertical spacing
        ========================================================================== */
     .section-industries {
@@ -1297,68 +1508,247 @@
       padding: 40px 0;
       border-top: 1px solid var(--ahi-border-light);
       border-bottom: 1px solid var(--ahi-border-light);
+      font-family: 'Montserrat', sans-serif;
     }
 
-    .industries-grid-6col {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
+    .industry-focus-header {
+      margin-bottom: 24px;
     }
 
-    .industry-card {
-      background-color: var(--ahi-white);
-      border: 1px solid var(--ahi-border-light);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
+    .industries-kicker {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #64748B;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .industry-focus-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 38px;
+      font-weight: 600;
+      color: var(--ahi-text-heading);
+      letter-spacing: -0.015em;
+      line-height: 1.22;
+      margin: 0;
+    }
+
+    .industry-focus-subhead {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--ahi-text-body);
+      line-height: 1.55;
+      margin: 12px 0 0 0;
+      max-width: 780px;
+    }
+
+    /* Industry Filter Pill Tabs */
+    .industry-tabs-nav {
       display: flex;
-      flex-direction: column;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
     }
 
-    .industry-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-hover);
+    .industry-pill-tab {
+      background-color: #FFFFFF;
+      border: 1px solid var(--ahi-border-light);
+      border-radius: 9999px;
+      padding: 9px 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--ahi-text-heading);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      line-height: 1.2;
+      outline: none;
     }
 
-    .industry-card-photo {
+    .industry-pill-tab:hover {
+      border-color: #163865;
+      color: #163865;
+      background-color: #F8FAFC;
+    }
+
+    .industry-pill-tab.is-active {
+      background-color: #163865;
+      border-color: #163865;
+      color: #FFFFFF;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(22, 56, 101, 0.2);
+    }
+
+    /* Master Card Architecture */
+    .industry-detail-card {
+      background-color: #FFFFFF;
+      border: 1px solid var(--ahi-border-light);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(16, 47, 88, 0.06);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 390px;
+      min-height: 390px;
+      max-height: 390px;
+    }
+
+    .industry-detail-card[hidden] {
+      display: none !important;
+    }
+
+    .industry-detail-card.is-active {
+      animation: industryFadeIn 0.22s ease forwards;
+    }
+
+    @keyframes industryFadeIn {
+      from {
+        opacity: 0.85;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Left: High-Res Facility Photo */
+    .industry-photo-col {
+      position: relative;
+      background-color: #E2E8F0;
+      overflow: hidden;
+      display: flex;
+      height: 100%;
+      min-height: 390px;
+    }
+
+    .industry-panel-img {
       width: 100%;
-      height: 180px;
+      height: 100%;
+      min-height: 390px;
+      max-height: 390px;
       object-fit: cover;
       display: block;
     }
 
-    .industry-card-body {
-      padding: 24px 22px;
+    /* Right: Structured Content */
+    .industry-info-col {
+      padding: 34px 48px;
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
-      justify-content: space-between;
+      justify-content: center;
+      background-color: #FFFFFF;
+      height: 390px;
+      min-height: 390px;
+      box-sizing: border-box;
     }
 
-    .industry-card-title {
-      font-size: 18px;
+    .industry-card-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #64748B;
+      margin: 0 0 8px 0;
+      display: inline-block;
+      line-height: 1.2;
+    }
+
+    .industry-card-heading {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 25px;
       font-weight: 600;
       color: var(--ahi-text-heading);
-      margin-bottom: 8px;
-      line-height: 1.3;
+      line-height: 1.25;
+      margin: 0 0 12px 0;
+      letter-spacing: -0.01em;
     }
 
     .industry-card-desc {
-      font-size: 13px;
-      color: var(--ahi-text-body);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14.5px;
+      font-weight: 400;
+      color: #64748B;
       line-height: 1.55;
-      margin-bottom: 16px;
+      margin: 0 0 18px 0;
+      max-width: 520px;
     }
 
-    .industry-card-badge {
-      font-size: 11px;
+    .industry-points-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .industry-point-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #393A3B;
+      line-height: 1.35;
+    }
+
+    .industry-check-icon {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #163865;
+    }
+
+    .industry-check-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: #163865;
+    }
+
+    .btn-industry-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #163865;
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
       font-weight: 600;
-      color: var(--ahi-navy-primary);
-      background-color: var(--ahi-blue-tint);
-      padding: 4px 10px;
+      padding: 0 24px;
+      height: 44px;
       border-radius: 5px;
-      align-self: flex-start;
+      text-decoration: none;
+      white-space: nowrap;
+      width: fit-content;
+      border: 1px solid #163865;
+      box-shadow: 0 4px 12px rgba(22, 56, 101, 0.16);
+      transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      margin-top: 4px;
+    }
+
+    .btn-industry-cta:hover {
+      background-color: #102F58;
+      color: #FFFFFF;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(22, 56, 101, 0.26);
+    }
+
+    .btn-industry-cta .btn-arrow {
+      font-size: 15px;
+      line-height: 1;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    .btn-industry-cta:hover .btn-arrow {
+      transform: translateX(3px);
     }
 
     /* ==========================================================================
@@ -1372,7 +1762,7 @@
     }
 
     .reasons-trust-header {
-      text-align: center;
+      text-align: left;
       margin-bottom: 46px;
     }
 
@@ -1389,71 +1779,100 @@
       font-size: 16px;
       color: var(--ahi-text-secondary);
       max-width: 680px;
-      margin: 0 auto;
+      margin: 0;
       line-height: 1.55;
     }
 
-    .reasons-grid-3col {
+        .reasons-grid-3col {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
+      gap: 30px;
     }
 
     .reasons-card {
       background-color: var(--ahi-white);
       border: 1px solid var(--ahi-border-light);
-      border-radius: 5px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
       display: flex;
       flex-direction: column;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .reasons-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-      border-color: #CBD5E1;
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px -4px rgba(22, 56, 101, 0.08), 0 4px 12px -2px rgba(22, 56, 101, 0.04);
+      border-color: #93C5FD;
+    }
+
+    .reasons-photo-wrap {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+      background-color: #F1F5F9;
     }
 
     .reasons-card-photo {
       width: 100%;
-      height: 210px;
+      height: 100%;
       object-fit: cover;
       display: block;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reasons-card:hover .reasons-card-photo {
+      transform: scale(1.04);
     }
 
     .reasons-card-content {
-      padding: 24px;
+      padding: 24px 26px 28px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
     }
 
+    .reasons-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
     .reasons-icon-box {
-      width: 44px;
-      height: 44px;
-      border-radius: 5px;
-      background-color: #EBF3FB;
-      border: 1px solid #D5E5F7;
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      background-color: #EFF6FF;
+      border: 1px solid #DBEAFE;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--ahi-blue-carrier);
-      margin-bottom: 16px;
+      color: #163865;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+
+    .reasons-card:hover .reasons-icon-box {
+      background-color: #163865;
+      color: #FFFFFF;
+      border-color: #163865;
     }
 
     .reasons-icon-box svg {
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
     }
 
     .reasons-card-heading {
-      font-size: 22px;
-      font-weight: 600;
-      color: var(--ahi-text-heading);
-      margin-bottom: 16px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #163865;
+      margin: 0;
       letter-spacing: -0.01em;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.25;
     }
 
     .reasons-checklist {
@@ -1461,24 +1880,36 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
+      margin: 0;
+      padding: 0;
     }
 
     .reasons-check-item {
       display: flex;
       align-items: flex-start;
-      gap: 10px;
+      gap: 12px;
       font-size: 14px;
       line-height: 1.5;
-      color: var(--ahi-text-body);
+      color: #475569;
+      font-weight: 500;
     }
 
-    .reasons-bullet-dot {
-      width: 6px;
-      height: 6px;
+    .reasons-check-bullet {
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
-      background-color: #163865;
-      margin-top: 7px;
+      background-color: #EFF6FF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .reasons-check-bullet svg {
+      width: 11px;
+      height: 11px;
+      stroke: #163865;
     }
 
     /* ==========================================================================
@@ -1538,6 +1969,7 @@
       color: var(--ahi-text-light);
       line-height: 1.6;
       margin-bottom: 30px;
+      max-width: 780px;
     }
 
     .form-scope-wrapper {
@@ -2138,19 +2570,20 @@
       }
       .what-is-grid {
         grid-template-columns: 1fr;
-        gap: 36px;
+        gap: 32px;
       }
-      .importance-banner {
+      .what-is-photo-wrapper img {
+        height: 380px;
+      }
+      .dispatch-banner-grid {
         grid-template-columns: 1fr;
-        height: auto;
-        min-height: auto;
+        gap: 28px;
       }
-      .importance-banner-media {
-        height: 240px;
-        min-height: 240px;
+      .dispatch-banner-media {
+        height: 250px;
       }
-      .importance-banner-content {
-        padding: 24px 22px;
+      .dispatch-banner-heading {
+        font-size: 24px;
       }
       .how-it-works-process {
         grid-template-columns: 1fr;
@@ -2162,6 +2595,30 @@
       .reasons-grid-3col {
         grid-template-columns: 1fr;
         gap: 36px;
+      }
+      .industry-detail-card {
+        grid-template-columns: 1fr;
+        max-height: none;
+        min-height: auto;
+        height: auto;
+      }
+      .industry-card-heading {
+        white-space: normal;
+        font-size: 22px;
+      }
+      .industry-photo-col {
+        min-height: auto;
+        height: 260px;
+      }
+      .industry-panel-img {
+        min-height: 220px;
+        max-height: 280px;
+        height: 260px;
+      }
+      .industry-info-col {
+        padding: 30px 24px;
+        min-height: auto;
+        height: auto;
       }
     }
 
@@ -2204,8 +2661,11 @@
       .importance-cards-grid {
         grid-template-columns: 1fr;
       }
-      .importance-banner-heading {
+      .dispatch-banner-heading {
         font-size: 22px;
+      }
+      .dispatch-banner-media {
+        height: 200px;
       }
       .emergencies-grid-6col,
       .industries-grid-6col {
@@ -2339,7 +2799,7 @@
                   </span>
                   <span class="mega-cat-label">Services</span>
                 </span>
-                <span class="mega-cat-arrow" aria-hidden="true">→</span>
+                <span class="mega-cat-arrow" aria-hidden="true">&rarr;</span>
               </button>
 
               <!-- Category 2: Modernization & Energy updates -->
@@ -2353,7 +2813,7 @@
                   </span>
                   <span class="mega-cat-label">Modernization &amp; Energy updates</span>
                 </span>
-                <span class="mega-cat-arrow" aria-hidden="true">→</span>
+                <span class="mega-cat-arrow" aria-hidden="true">&rarr;</span>
               </button>
 
               <!-- Category 3: Repair & Rapid Response -->
@@ -2366,7 +2826,7 @@
                   </span>
                   <span class="mega-cat-label">Repair &amp; Rapid Response</span>
                 </span>
-                <span class="mega-cat-arrow" aria-hidden="true">→</span>
+                <span class="mega-cat-arrow" aria-hidden="true">&rarr;</span>
               </button>
 
               <!-- Category 4: Maintenance & Lifestyle Service (Active by default in reference) -->
@@ -2383,7 +2843,7 @@
                   </span>
                   <span class="mega-cat-label">Maintenance &amp; Lifestyle Service</span>
                 </span>
-                <span class="mega-cat-arrow" aria-hidden="true">→</span>
+                <span class="mega-cat-arrow" aria-hidden="true">&rarr;</span>
               </button>
 
             </div>
@@ -2511,6 +2971,7 @@
 
         <!-- Right: Heading, Checkmark List & CTA -->
         <div class="what-is-content">
+          <span class="section-eyebrow what-is-kicker">WHAT IS EMERGENCY HVAC REPAIR</span>
           <h2 id="what-is-heading" class="what-is-heading">What is Emergency HVAC Repair?</h2>
 
           <ul class="what-is-list">
@@ -2518,31 +2979,31 @@
               <span class="check-circle-blue" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
               </span>
-              <span class="what-is-list-text">AHI Carrier Service offers a nationwide service for HVAC system repairs.</span>
+              <span class="what-is-list-text">AHI Carrier Service offers nationwide commercial HVAC system repairs.</span>
             </li>
             <li class="what-is-list-item">
               <span class="check-circle-blue" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
               </span>
-              <span class="what-is-list-text">Network of engineers located throughout New Zealand providing emergency and planned repair work to our clients.</span>
+              <span class="what-is-list-text">Nationwide engineers providing rapid emergency and planned repair work.</span>
             </li>
             <li class="what-is-list-item">
               <span class="check-circle-blue" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
               </span>
-              <span class="what-is-list-text">Through our extensive knowledge of repairing HVAC systems, we understand the consequences of system downtime.</span>
+              <span class="what-is-list-text">Extensive technical expertise minimizing commercial plant downtime.</span>
             </li>
             <li class="what-is-list-item">
               <span class="check-circle-blue" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
               </span>
-              <span class="what-is-list-text">We ensure our clients receive a fast and efficient response/repair service, providing you with complete peace of mind.</span>
+              <span class="what-is-list-text">Fast, efficient repair response providing complete peace of mind.</span>
             </li>
           </ul>
 
           <a href="#request-repair" class="btn-enquire-now">
-            <span>Enquire Now</span>
-            <span aria-hidden="true">→</span>
+            <span>Download Brochure</span>
+            <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
 
@@ -2558,153 +3019,216 @@
   <section class="section-reasons-trust" aria-labelledby="reasons-heading">
     <div class="container">
       <div class="reasons-trust-header">
-        <h2 id="reasons-heading" class="reasons-trust-title">Why AHI Carrier?</h2>
+        <span class="section-eyebrow reasons-trust-kicker">WHY AHI CARRIER</span>
+        <h2 id="reasons-heading" class="reasons-trust-title">What Sets AHI Carrier Apart</h2>
         <p class="reasons-trust-subtitle">Trusted expertise, nationwide coverage and repairs that keep your building performing.</p>
       </div>
 
       <div class="reasons-grid-3col">
         
         <!-- Pillar 1: Trust -->
-        <div class="reasons-card">
-          <img src="Reference files/trust.png" alt="AHI Carrier certified technician servicing commercial equipment" class="reasons-card-photo" loading="lazy">
+        <article class="reasons-card">
+          <div class="reasons-photo-wrap">
+            <img src="Reference files/trust.png" alt="AHI Carrier certified technician servicing commercial equipment" class="reasons-card-photo" loading="lazy">
+          </div>
           
           <div class="reasons-card-content">
-            <div class="reasons-icon-box" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                <polyline points="9 12 11 14 15 10"></polyline>
-              </svg>
+            <div class="reasons-card-header">
+              <div class="reasons-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <polyline points="9 12 11 14 15 10"></polyline>
+                </svg>
+              </div>
+              <h3 class="reasons-card-heading">Trust</h3>
             </div>
-
-            <h3 class="reasons-card-heading">Trust</h3>
 
             <ul class="reasons-checklist">
               <li class="reasons-check-item">
-                <span class="reasons-bullet-dot" aria-hidden="true"></span>
+                <span class="reasons-check-bullet" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
                 <span>Professional teams for complex work</span>
               </li>
               <li class="reasons-check-item">
-                <span class="reasons-bullet-dot" aria-hidden="true"></span>
+                <span class="reasons-check-bullet" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
                 <span>Minimal disruption, fastest turnaround</span>
               </li>
               <li class="reasons-check-item">
-                <span class="reasons-bullet-dot" aria-hidden="true"></span>
+                <span class="reasons-check-bullet" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
                 <span>High quality and value for money</span>
               </li>
             </ul>
           </div>
-        </div>
+        </article>
 
         <!-- Pillar 2: Flexibility -->
-        <div class="reasons-card">
-          <img src="Reference files/flexibility.png" alt="Auckland skyline representing nationwide New Zealand network" class="reasons-card-photo" loading="lazy">
+        <article class="reasons-card">
+          <div class="reasons-photo-wrap">
+            <img src="Reference files/flexibility.png" alt="Auckland skyline representing nationwide New Zealand network" class="reasons-card-photo" loading="lazy">
+          </div>
           
           <div class="reasons-card-content">
-            <div class="reasons-icon-box" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="23 4 23 10 17 10"></polyline>
-                <polyline points="1 20 1 14 7 14"></polyline>
-                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
-              </svg>
+            <div class="reasons-card-header">
+              <div class="reasons-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="23 4 23 10 17 10"></polyline>
+                  <polyline points="1 20 1 14 7 14"></polyline>
+                  <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                </svg>
+              </div>
+              <h3 class="reasons-card-heading">Flexibility</h3>
             </div>
-
-            <h3 class="reasons-card-heading">Flexibility</h3>
 
             <ul class="reasons-checklist">
               <li class="reasons-check-item">
-                <span class="reasons-bullet-dot" aria-hidden="true"></span>
+                <span class="reasons-check-bullet" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
                 <span>All HVAC systems and manufacturers</span>
               </li>
               <li class="reasons-check-item">
-                <span class="reasons-bullet-dot" aria-hidden="true"></span>
+                <span class="reasons-check-bullet" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
                 <span>Nationwide network, available 24/7/365</span>
               </li>
               <li class="reasons-check-item">
-                <span class="reasons-bullet-dot" aria-hidden="true"></span>
+                <span class="reasons-check-bullet" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
                 <span>Tailored to any scale or job size</span>
               </li>
             </ul>
           </div>
-        </div>
+        </article>
 
         <!-- Pillar 3: Optimised Performance -->
-        <div class="reasons-card">
-          <img src="Reference files/optimised performance.png" alt="Engineer inspecting BMS diagnostic touchscreen in facility plant room" class="reasons-card-photo" loading="lazy">
+        <article class="reasons-card">
+          <div class="reasons-photo-wrap">
+            <img src="Reference files/optimised performance.png" alt="Engineer inspecting BMS diagnostic touchscreen in facility plant room" class="reasons-card-photo" loading="lazy">
+          </div>
           
           <div class="reasons-card-content">
-            <div class="reasons-icon-box" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
+            <div class="reasons-card-header">
+              <div class="reasons-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <h3 class="reasons-card-heading">Optimised Performance</h3>
             </div>
-
-            <h3 class="reasons-card-heading">Optimised Performance</h3>
 
             <ul class="reasons-checklist">
               <li class="reasons-check-item">
-                <span class="reasons-bullet-dot" aria-hidden="true"></span>
+                <span class="reasons-check-bullet" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
                 <span>Improves efficiency and overall systems</span>
               </li>
               <li class="reasons-check-item">
-                <span class="reasons-bullet-dot" aria-hidden="true"></span>
+                <span class="reasons-check-bullet" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
                 <span>Qualified engineers offer technical advice</span>
+              </li>
+              <li class="reasons-check-item">
+                <span class="reasons-check-bullet" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Proactive care prevents future failures</span>
               </li>
             </ul>
           </div>
-        </div>
+        </article>
 
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       SECTION 04 · HOW IT WORKS (LIGHT THEME)
+       SECTION 03 · HOW IT WORKS (LIGHT THEME VERTICAL TIMELINE)
        Spacing: Exactly 40px vertical spacing
-       Reference: Simple Process / How it works (Image 3)
+       Reference: media_1795074640692_03d3e40b.png (Light Theme Adaptation - Minimal Canvas)
        ========================================================================== -->
   <section class="section-how-it-works" aria-labelledby="how-it-works-heading">
     <div class="container">
-      <div class="how-it-works-header">
-        <h2 id="how-it-works-heading" class="how-it-works-title">How it works</h2>
-      </div>
-
-      <div class="how-it-works-process">
-        <!-- Step 01 -->
-        <div class="process-step-item">
-          <div class="process-step-num">01</div>
-          <div class="process-icon-circle" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-          </div>
-          <h3 class="process-step-title">Call / Book</h3>
-          <p class="process-step-desc">Call 0800 247 266 or Book a Service Call.</p>
+      <div class="hiw-timeline-grid">
+        
+        <!-- Left Column: Heading, Subtitle & Trust Badges -->
+        <div class="hiw-left-col">
+          <span class="section-eyebrow how-it-works-kicker">EMERGENCY HVAC REPAIR</span>
+          <h2 id="how-it-works-heading" class="how-it-works-title">How it works</h2>
+          <p class="how-it-works-desc">Clear, fast and easy to follow — even on a phone.</p>
         </div>
 
-        <!-- Step 02 -->
-        <div class="process-step-item">
-          <div class="process-step-num">02</div>
-          <div class="process-icon-circle" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-            </svg>
+        <!-- Right Column: Vertical Timeline Track with 3 Step Cards -->
+        <div class="hiw-timeline-track">
+          
+          <!-- Step 01: Call / Book -->
+          <div class="hiw-card-wrapper">
+            <div class="hiw-step-card">
+              <div class="hiw-step-left">
+                <span class="hiw-step-num">01</span>
+                <div class="hiw-step-icon-badge" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="hiw-step-content">
+                  <h3 class="hiw-step-title">Call / Book</h3>
+                  <p class="hiw-step-desc">Call 0800 247 266 or Book a Service Call.</p>
+                </div>
+              </div>
+              <span class="hiw-step-badge">Call us</span>
+            </div>
           </div>
-          <h3 class="process-step-title">Fast Dispatch</h3>
-          <p class="process-step-desc">Nationwide engineer dispatched for fast, efficient response.</p>
+
+          <!-- Step 02: Fast Dispatch -->
+          <div class="hiw-card-wrapper">
+            <div class="hiw-step-card">
+              <div class="hiw-step-left">
+                <span class="hiw-step-num">02</span>
+                <div class="hiw-step-icon-badge" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                </div>
+                <div class="hiw-step-content">
+                  <h3 class="hiw-step-title">Fast Dispatch</h3>
+                  <p class="hiw-step-desc">Nationwide engineer dispatched for fast, efficient response.</p>
+                </div>
+              </div>
+              <span class="hiw-step-badge">We dispatch</span>
+            </div>
+          </div>
+
+          <!-- Step 03: Repair & Back Online -->
+          <div class="hiw-card-wrapper">
+            <div class="hiw-step-card">
+              <div class="hiw-step-left">
+                <span class="hiw-step-num">03</span>
+                <div class="hiw-step-icon-badge" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                  </svg>
+                </div>
+                <div class="hiw-step-content">
+                  <h3 class="hiw-step-title">Repair &amp; Back Online</h3>
+                  <p class="hiw-step-desc">Genuine Carrier parts, shortest downtime.</p>
+                </div>
+              </div>
+              <span class="hiw-step-badge">You're back online</span>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Step 03 -->
-        <div class="process-step-item">
-          <div class="process-step-num">03</div>
-          <div class="process-icon-circle" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-            </svg>
-          </div>
-          <h3 class="process-step-title">Repair &amp; Back Online</h3>
-          <p class="process-step-desc">Genuine Carrier parts, shortest downtime.</p>
-        </div>
       </div>
     </div>
   </section>
@@ -2720,6 +3244,7 @@
       
       <!-- Section Heading -->
       <div class="importance-header">
+        <span class="section-eyebrow importance-kicker">OPERATIONAL CONTINUITY</span>
         <h2 id="importance-heading" class="importance-title">The Importance of Fast, Efficient HVAC Repair</h2>
       </div>
 
@@ -2782,17 +3307,26 @@
 
       </div>
 
-      <!-- Feature Banner: Image on Left, Navy Panel & CTA on Right -->
-      <div class="importance-banner">
-        <div class="importance-banner-media">
-          <img src="Reference files/imp of emergency hvac.jpeg" alt="AHI Carrier certified emergency HVAC engineer conducting diagnostic repairs on rooftop commercial equipment" class="importance-banner-img" loading="lazy">
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 05B · NATIONWIDE EMERGENCY HVAC DISPATCH (FULL-WIDTH NAVY BANNER)
+       Spacing: Exactly 40px vertical spacing
+       ========================================================================== -->
+  <section class="section-dispatch-banner" aria-label="Nationwide Emergency Dispatch">
+    <div class="container">
+      <div class="dispatch-banner-grid">
+        <div class="dispatch-banner-media">
+          <img src="Reference files/imp of emergency hvac.jpeg" alt="AHI Carrier certified emergency HVAC engineer conducting diagnostic repairs on rooftop commercial equipment" class="dispatch-banner-img" loading="lazy">
         </div>
 
-        <div class="importance-banner-content">
-          <h3 class="importance-banner-heading">Wherever you operate, the response is the same.</h3>
-          <p class="importance-banner-desc">Fast, coordinated, and focused on getting you back online. With certified engineers nationwide across New Zealand, AHI Carrier provides 24/7 emergency dispatch and genuine parts.</p>
-          <div class="importance-banner-actions">
-            <a href="#request-repair" class="btn-importance-cta">
+        <div class="dispatch-banner-content">
+          <span class="dispatch-banner-eyebrow">24/7 NATIONWIDE RESPONSE</span>
+          <h2 class="dispatch-banner-heading">Fast repairs keep you running</h2>
+          <p class="dispatch-banner-desc">With certified engineers stationed across New Zealand, AHI Carrier delivers 24/7 rapid emergency dispatch, expert diagnostics, and genuine Carrier parts to minimise downtime.</p>
+          <div class="dispatch-banner-actions">
+            <a href="#request-repair" class="btn-dispatch-cta">
               <span>Book a Service Call</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -2802,18 +3336,18 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ==========================================================================
+    <!-- ==========================================================================
        SECTION 06 · COMMON HVAC EMERGENCIES (LIGHT THEME)
        Spacing: Exactly 40px vertical spacing
        Clean, minimal, uncluttered 6-Card Grid (CTAs removed, short text)
        ========================================================================== -->
   <section class="section-emergencies" aria-labelledby="emergencies-heading">
     <div class="container">
-      <div class="section-header-center">
+      <div class="section-header-left">
+        <span class="section-eyebrow emergencies-kicker">EQUIPMENTS WE MONITOR</span>
         <h2 id="emergencies-heading" class="section-title-h2">Common HVAC Emergencies We Resolve</h2>
         <p class="section-lead-text">Our qualified nationwide engineering network is equipped to diagnose and repair urgent mechanical, electrical, and refrigerant failures across all commercial HVAC plant.</p>
       </div>
@@ -2882,82 +3416,235 @@
        ========================================================================== -->
   <section class="section-industries" aria-labelledby="industries-heading">
     <div class="container">
-      <div class="section-header-center">
-        <h2 id="industries-heading" class="section-title-h2">Industries We Support Across New Zealand</h2>
-        <p class="section-lead-text">Delivering emergency HVAC repair tailored to the operational demands, compliance criteria, and uptime requirements of essential commercial and industrial sectors.</p>
+      <div class="industry-focus-header">
+        <span class="section-eyebrow industries-kicker">CRITICAL SECTOR UPTIME</span>
+        <h2 id="industries-heading" class="industry-focus-title">Industries We Support Across New Zealand</h2>
+        <p class="industry-focus-subhead">Delivering emergency HVAC repair tailored to the operational demands, compliance criteria, and uptime requirements of essential commercial and industrial sectors.</p>
       </div>
 
-      <div class="industries-grid-6col">
-        <!-- Industry 1: Healthcare -->
-        <div class="industry-card">
-          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80" alt="Hospital and healthcare clinical environment" class="industry-card-photo" loading="lazy">
-          <div class="industry-card-body">
-            <div>
-              <h3 class="industry-card-title">Healthcare</h3>
-              <p class="industry-card-desc">Protecting patient care facilities, sterile surgical theatres, and medical laboratories where climate precision is vital.</p>
-            </div>
-            <span class="industry-card-badge">Critical Uptime</span>
-          </div>
-        </div>
+      <!-- Industry Filter Pill Tabs -->
+      <div class="industry-tabs-nav" role="tablist" aria-label="Industries Supported">
+        <button type="button" class="industry-pill-tab is-active" data-target="panel-healthcare" role="tab" aria-selected="true">Healthcare</button>
+        <button type="button" class="industry-pill-tab" data-target="panel-datacentres" role="tab" aria-selected="false">Data Centres</button>
+        <button type="button" class="industry-pill-tab" data-target="panel-manufacturing" role="tab" aria-selected="false">Manufacturing</button>
+        <button type="button" class="industry-pill-tab" data-target="panel-commercial" role="tab" aria-selected="false">Commercial Buildings</button>
+        <button type="button" class="industry-pill-tab" data-target="panel-hospitality" role="tab" aria-selected="false">Hospitality</button>
+        <button type="button" class="industry-pill-tab" data-target="panel-retail" role="tab" aria-selected="false">Retail &amp; Malls</button>
+      </div>
 
-        <!-- Industry 2: Data Centres -->
-        <div class="industry-card">
-          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" alt="High density data centre server room" class="industry-card-photo" loading="lazy">
-          <div class="industry-card-body">
-            <div>
-              <h3 class="industry-card-title">Data Centres</h3>
-              <p class="industry-card-desc">Maintaining thermal stability and humidity controls to prevent server overheating and infrastructure outages.</p>
-            </div>
-            <span class="industry-card-badge">Thermal Precision</span>
-          </div>
+      <!-- Panel 1: Healthcare (Active by Default) -->
+      <div id="panel-healthcare" class="industry-detail-card" role="tabpanel">
+        <div class="industry-photo-col">
+          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=80" alt="Hospital and sterile surgical clinical healthcare facility" class="industry-panel-img" loading="lazy">
         </div>
-
-        <!-- Industry 3: Manufacturing -->
-        <div class="industry-card">
-          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Industrial manufacturing plant and production line" class="industry-card-photo" loading="lazy">
-          <div class="industry-card-body">
-            <div>
-              <h3 class="industry-card-title">Manufacturing</h3>
-              <p class="industry-card-desc">Preventing costly plant stoppages and protecting industrial processing lines from thermal shutdowns.</p>
-            </div>
-            <span class="industry-card-badge">Process Continuity</span>
-          </div>
+        <div class="industry-info-col">
+          <span class="industry-card-eyebrow">HEALTHCARE &amp; SURGICAL THEATRES</span>
+          <h3 class="industry-card-heading">Critical care cannot pause for climate failure.</h3>
+          <p class="industry-card-desc">Protecting patient care facilities, sterile surgical theatres, and medical laboratories where rapid emergency HVAC restoration and strict airborne infection control are vital.</p>
+          <ul class="industry-points-list">
+            <li class="industry-point-item">
+              <span class="industry-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </span>
+              <span>Priority emergency dispatch for surgical suites &amp; intensive care units</span>
+            </li>
+            <li class="industry-point-item">
+              <span class="industry-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </span>
+              <span>24/7 rapid stabilization of chillers, AHUs, and critical air filtration</span>
+            </li>
+            <li class="industry-point-item">
+              <span class="industry-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </span>
+              <span>Carrier OEM genuine parts keeping clinical environments fully compliant</span>
+            </li>
+          </ul>
+          <a href="#request-repair" class="btn-industry-cta">
+            <span>Request Emergency Service</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
         </div>
+      </div>
 
-        <!-- Industry 4: Commercial Buildings -->
-        <div class="industry-card">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Multi-storey commercial office tower" class="industry-card-photo" loading="lazy">
-          <div class="industry-card-body">
-            <div>
-              <h3 class="industry-card-title">Commercial Buildings</h3>
-              <p class="industry-card-desc">Preserving workplace productivity and tenant satisfaction across multi-storey corporate office facilities.</p>
-            </div>
-            <span class="industry-card-badge">Tenant Comfort</span>
-          </div>
+      <!-- Panel 2: Data Centres -->
+      <div id="panel-datacentres" class="industry-detail-card" role="tabpanel" hidden>
+        <div class="industry-photo-col">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80" alt="High density commercial data centre server racks" class="industry-panel-img" loading="lazy">
         </div>
-
-        <!-- Industry 5: Hospitality -->
-        <div class="industry-card">
-          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Luxury hospitality hotel lobby and suites" class="industry-card-photo" loading="lazy">
-          <div class="industry-card-body">
-            <div>
-              <h3 class="industry-card-title">Hospitality</h3>
-              <p class="industry-card-desc">Ensuring seamless guest comfort in major hotels, conference centres, and entertainment venues 24/7.</p>
-            </div>
-            <span class="industry-card-badge">Guest Experience</span>
-          </div>
+        <div class="industry-info-col">
+          <span class="industry-card-eyebrow">HIGH-DENSITY DATA CENTRES</span>
+          <h3 class="industry-card-heading">Protecting thermal stability and server uptime.</h3>
+          <p class="industry-card-desc">Maintaining rigorous temperature tolerances and humidity controls to prevent server rack overheating, thermal cascading, and catastrophic infrastructure outages.</p>
+          <ul class="industry-points-list">
+            <li class="industry-point-item">
+              <span class="industry-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </span>
+              <span>Immediate response for CRAC units, chillers, and condenser loops</span>
+            </li>
+            <li class="industry-point-item">
+              <span class="industry-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </span>
+              <span>Nationwide emergency network ready for 24/7 mission-critical dispatch</span>
+            </li>
+            <li class="industry-point-item">
+              <span class="industry-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </span>
+              <span>Root-cause electrical and refrigerant diagnostics to prevent recurrence</span>
+            </li>
+          </ul>
+          <a href="#request-repair" class="btn-industry-cta">
+            <span>Request Emergency Service</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
         </div>
+      </div>
 
-        <!-- Industry 6: Retail -->
-        <div class="industry-card">
-          <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=600&q=80" alt="Commercial shopping mall and retail stores" class="industry-card-photo" loading="lazy">
-          <div class="industry-card-body">
-            <div>
-              <h3 class="industry-card-title">Retail</h3>
-              <p class="industry-card-desc">Keeping shopping centres comfortable to ensure customers keep buying and temperature-sensitive goods are preserved.</p>
-            </div>
-            <span class="industry-card-badge">Retail Protection</span>
-          </div>
+      <!-- Panel 3: Manufacturing -->
+      <div id="panel-manufacturing" class="industry-detail-card" role="tabpanel" hidden>
+        <div class="industry-photo-col">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=80" alt="Industrial manufacturing plant and automated assembly lines" class="industry-panel-img" loading="lazy">
+        </div>
+        <div class="industry-info-col">
+          <span class="industry-card-eyebrow">INDUSTRIAL PLANTS &amp; PROCESSING</span>
+          <h3 class="industry-card-heading">Preventing costly thermal plant shutdowns.</h3>
+          <p class="industry-card-desc">Protecting production lines, heavy machinery cooling loops, and sensitive processing environments from emergency thermal halts and equipment damage.</p>
+          <ul class="industry-points-list">
+            <li class="industry-point-item">
+              <span class="industry-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </span>
+              <span>Rapid turnaround on industrial chillers, compressors &amp; cooling towers</span>
+            </li>
+            <li class="industry-point-item">
+              <span class="industry-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </span>
+              <span>Certified Carrier master technicians experienced with heavy commercial plant</span>
+            </li>
+            <li class="industry-point-item">
+              <span class="industry-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </span>
+              <span>Nationwide mobile engineering teams equipped with specialized tooling</span>
+            </li>
+          </ul>
+          <a href="#request-repair" class="btn-industry-cta">
+            <span>Request Emergency Service</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Panel 4: Commercial Buildings -->
+      <div id="panel-commercial" class="industry-detail-card" role="tabpanel" hidden>
+        <div class="industry-photo-col">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80" alt="Multi-storey corporate commercial towers and business centers" class="industry-panel-img" loading="lazy">
+        </div>
+        <div class="industry-info-col">
+          <span class="industry-card-eyebrow">COMMERCIAL TOWERS &amp; OFFICES</span>
+          <h3 class="industry-card-heading">Preserving workplace productivity and tenant comfort.</h3>
+          <p class="industry-card-desc">Rapidly restoring multi-zone VRF systems, central chilled water loops, and air distribution across corporate offices to maintain tenant satisfaction and indoor air quality.</p>
+          <ul class="industry-points-list">
+            <li class="industry-point-item">
+              <span class="industry-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </span>
+              <span>Same-day diagnostics for central plant, AHUs, and economizers</span>
+            </li>
+            <li class="industry-point-item">
+              <span class="industry-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </span>
+              <span>Low-disruption repair protocols keeping business tenants operational</span>
+            </li>
+            <li class="industry-point-item">
+              <span class="industry-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </span>
+              <span>Emergency parts sourcing directly from Carrier New Zealand inventory</span>
+            </li>
+          </ul>
+          <a href="#request-repair" class="btn-industry-cta">
+            <span>Request Emergency Service</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Panel 5: Hospitality -->
+      <div id="panel-hospitality" class="industry-detail-card" role="tabpanel" hidden>
+        <div class="industry-photo-col">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80" alt="Premier hospitality luxury resort and hotel complex" class="industry-panel-img" loading="lazy">
+        </div>
+        <div class="industry-info-col">
+          <span class="industry-card-eyebrow">HOTELS, RESORTS &amp; VENUES</span>
+          <h3 class="industry-card-heading">Seamless 24/7 guest comfort across every room.</h3>
+          <p class="industry-card-desc">Ensuring quiet, rapid emergency HVAC repairs for premier hotels, luxury suites, and conference facilities where comfort failure directly threatens guest reviews and revenues.</p>
+          <ul class="industry-points-list">
+            <li class="industry-point-item">
+              <span class="industry-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </span>
+              <span>Discreet 24/7 emergency dispatch minimizing guest disturbance</span>
+            </li>
+            <li class="industry-point-item">
+              <span class="industry-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </span>
+              <span>Fast resolution for centralized chillers, boilers, and fan coil units</span>
+            </li>
+            <li class="industry-point-item">
+              <span class="industry-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </span>
+              <span>Comprehensive functional testing before sign-off to ensure quiet operation</span>
+            </li>
+          </ul>
+          <a href="#request-repair" class="btn-industry-cta">
+            <span>Request Emergency Service</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Panel 6: Retail & Malls -->
+      <div id="panel-retail" class="industry-detail-card" role="tabpanel" hidden>
+        <div class="industry-photo-col">
+          <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1000&q=80" alt="Retail shopping centre concourse and stores" class="industry-panel-img" loading="lazy">
+        </div>
+        <div class="industry-info-col">
+          <span class="industry-card-eyebrow">RETAIL CENTRES &amp; MALLS</span>
+          <h3 class="industry-card-heading">Protecting footfall, shopping comfort, and inventory.</h3>
+          <p class="industry-card-desc">Restoring shopping malls, retail chains, and supermarkets quickly to keep customers comfortable, maintain store traffic, and protect climate-sensitive merchandise.</p>
+          <ul class="industry-points-list">
+            <li class="industry-point-item">
+              <span class="industry-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </span>
+              <span>Rapid restoration of high-capacity rooftop packaged units &amp; concourse AHUs</span>
+            </li>
+            <li class="industry-point-item">
+              <span class="industry-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </span>
+              <span>Fast response to prevent inventory loss in food and perishable retail</span>
+            </li>
+            <li class="industry-point-item">
+              <span class="industry-check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
+              </span>
+              <span>Direct access to factory-original Carrier motors, valves, and compressors</span>
+            </li>
+          </ul>
+          <a href="#request-repair" class="btn-industry-cta">
+            <span>Request Emergency Service</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
         </div>
       </div>
     </div>
@@ -2974,7 +3661,7 @@
         <!-- Left Panel: Dark Navy Value & Contact (530px) -->
         <div class="form-left-panel">
           <div>
-            <span class="form-panel-top-kicker">GET STARTED</span>
+            <span class="section-eyebrow form-panel-kicker">24/7 RAPID DISPATCH</span>
             <h2 id="form-card-title" class="form-panel-title">Request Emergency HVAC Repair</h2>
             <p class="form-panel-desc">Tell us about your emergency and our specialists will coordinate the required technical response to restore your plant's performance.</p>
 
@@ -3101,7 +3788,7 @@
 
             <button type="submit" class="btn-form-submit">
               <span>Book emergency repair service</span>
-              <span aria-hidden="true">→</span>
+              <span aria-hidden="true">&rarr;</span>
             </button>
           </form>
         </div>
@@ -3116,7 +3803,10 @@
   <section class="section-other-services" aria-labelledby="other-services-title">
     <div class="container">
       <div class="services-header-row">
-        <h2 id="other-services-title" class="section-title-h2">Explore Other Services</h2>
+        <div>
+          <span class="section-eyebrow services-kicker">COMPREHENSIVE HVAC SUPPORT</span>
+          <h2 id="other-services-title" class="section-title-h2">Explore Other Services</h2>
+        </div>
         <a href="#all-services" class="services-view-all">view all services</a>
       </div>
 
@@ -3128,7 +3818,7 @@
               <h3 class="service-card-title">Air Handling Unit Upgrades</h3>
               <p class="service-card-desc">Upgrade legacy air handling units with high-efficiency technology for cleaner air and lower running costs.</p>
             </div>
-            <a href="#air-handling" class="service-card-link">Learn More →</a>
+            <a href="#air-handling" class="service-card-link">Learn More &rarr;</a>
           </div>
         </article>
 
@@ -3139,7 +3829,7 @@
               <h3 class="service-card-title">System Replacement Services</h3>
               <p class="service-card-desc">Seamless replacement of legacy cooling systems with high-efficiency technology.</p>
             </div>
-            <a href="#system-replacement" class="service-card-link">Learn More →</a>
+            <a href="#system-replacement" class="service-card-link">Learn More &rarr;</a>
           </div>
         </article>
 
@@ -3150,7 +3840,7 @@
               <h3 class="service-card-title">Retrofit & Energy Services</h3>
               <p class="service-card-desc">Optimize existing systems with smart retrofits to reduce energy use.</p>
             </div>
-            <a href="#retrofit-energy" class="service-card-link">Learn More →</a>
+            <a href="#retrofit-energy" class="service-card-link">Learn More &rarr;</a>
           </div>
         </article>
 
@@ -3161,7 +3851,7 @@
               <h3 class="service-card-title">R22 Replacement Services</h3>
               <p class="service-card-desc">Replace phased-out R22 refrigerants with modern, compliant alternatives.</p>
             </div>
-            <a href="#r22-replacement" class="service-card-link">Learn More →</a>
+            <a href="#r22-replacement" class="service-card-link">Learn More &rarr;</a>
           </div>
         </article>
       </div>
@@ -3459,6 +4149,42 @@
       document.querySelectorAll('.mega-subitem-link').forEach(function (link) {
         link.addEventListener('click', function () {
           closeMenu();
+        });
+      });
+
+      // Industry Focus Tab Switching (Section 05) - Switch on Hover, Click, and Focus
+      const industryTabs = document.querySelectorAll('.industry-pill-tab');
+      const industryPanels = document.querySelectorAll('.industry-detail-card');
+
+      function switchIndustryTab(tab) {
+        const targetId = tab.getAttribute('data-target');
+        industryTabs.forEach(function (t) {
+          t.classList.remove('is-active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('is-active');
+        tab.setAttribute('aria-selected', 'true');
+
+        industryPanels.forEach(function (panel) {
+          if (panel.id === targetId) {
+            panel.classList.add('is-active');
+            panel.removeAttribute('hidden');
+          } else {
+            panel.classList.remove('is-active');
+            panel.setAttribute('hidden', '');
+          }
+        });
+      }
+
+      industryTabs.forEach(function (tab) {
+        tab.addEventListener('mouseenter', function () {
+          switchIndustryTab(this);
+        });
+        tab.addEventListener('click', function () {
+          switchIndustryTab(this);
+        });
+        tab.addEventListener('focus', function () {
+          switchIndustryTab(this);
         });
       });
     });

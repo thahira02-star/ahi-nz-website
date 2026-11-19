@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Montserrat', sans-serif; }
+.test-hero {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 780px;
+  border: 1px solid red;
+  padding: 10px;
+}
+.test-hero-18 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 780px;
+  border: 1px solid blue;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+<p class="test-hero" id="t16">When climate control failure threatens operations, patient care, or cold-chain logistics, AHI Carrier dispatches certified master engineers and mobile chiller units within minutes.</p>
+<p class="test-hero-18" id="t18">When climate control failure threatens operations, patient care, or cold-chain logistics, AHI Carrier dispatches certified master engineers and mobile chiller units within minutes.</p>
+<script>
+window.onload = function() {
+  var t16 = document.getElementById('t16');
+  var t18 = document.getElementById('t18');
+  console.log("t16 clientHeight:", t16.clientHeight, "scrollHeight:", t16.scrollHeight);
+  console.log("t18 clientHeight:", t18.clientHeight, "scrollHeight:", t18.scrollHeight);
+  // line-height is 16 * 1.6 = 25.6px. 2 lines + padding(20) = ~71px. 3 lines + padding = ~97px.
+  document.title = "Lines16=" + Math.round((t16.clientHeight - 20) / 25.6) + " Lines18=" + Math.round((t18.clientHeight - 20) / (18 * 1.6));
+};
+</script>
+</body>
+</html>

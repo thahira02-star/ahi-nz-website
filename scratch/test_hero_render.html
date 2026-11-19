@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Montserrat', sans-serif; background: #fff; margin: 20px; }
+.hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #111;
+  max-width: 780px;
+  border: 1px solid green;
+}
+.hero-subtitle-18 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #111;
+  max-width: 780px;
+  border: 1px solid blue;
+}
+</style>
+</head>
+<body>
+<h3>16px, max-width: 780px</h3>
+<p class="hero-subtitle" id="p16">When climate control failure threatens operations, patient care, or cold-chain logistics, AHI Carrier dispatches certified master engineers and mobile chiller units within minutes.</p>
+
+<h3>18px, max-width: 780px (Predictive Maintenance Hero)</h3>
+<p class="hero-subtitle-18" id="p18">Predictive HVAC maintenance uses IoT sensors, real-time data analytics, and machine learning to monitor equipment conditions and forecast failures before they happen</p>
+
+<div id="output" style="font-size: 20px; font-weight: bold; margin-top: 30px;"></div>
+
+<script>
+document.fonts.ready.then(function() {
+  var p16 = document.getElementById('p16');
+  var p18 = document.getElementById('p18');
+  var lh16 = parseFloat(getComputedStyle(p16).lineHeight);
+  var lh18 = parseFloat(getComputedStyle(p18).lineHeight);
+  var lines16 = Math.round(p16.offsetHeight / lh16);
+  var lines18 = Math.round(p18.offsetHeight / lh18);
+  document.getElementById('output').innerHTML = "P16 Height=" + p16.offsetHeight + " (LineHeight=" + lh16 + " -> " + lines16 + " lines)<br>" +
+                                                "P18 Height=" + p18.offsetHeight + " (LineHeight=" + lh18 + " -> " + lines18 + " lines)";
+});
+</script>
+</body>
+</html>
