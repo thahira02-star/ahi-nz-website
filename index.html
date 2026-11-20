@@ -1230,198 +1230,140 @@
       }
     }
     /* ==========================================================================
-       SECTION 05 · THE IMPORTANCE OF FAST REPAIR (LIGHT THEME)
+       SECTION 05 · THE IMPORTANCE OF FAST REPAIR (UNIFIED 2-COLUMN SPLIT SHOWCASE)
        Spacing: Exactly 40px vertical spacing
-       Layout: Heading -> 5 Cards Grid -> Banner (Image on Left, Navy CTA Card on Right)
-       Reference: imp of emergency hvac.png & user layout reference
+       Layout: Full-Width Rich Dark Navy (#0B2341) with 2-Column Split Showcase
+       Reference: media_1795090643396_8a678c94.jpg
        ========================================================================== */
-    .section-importance {
-      background-color: var(--ahi-white);
-      padding: 40px 0;
-    }
-
-    .importance-header {
-      margin-bottom: 32px;
-    }
-
-    .importance-title {
-      font-size: 34px;
-      font-weight: 600;
-      color: var(--ahi-text-heading);
-      letter-spacing: -0.015em;
-      line-height: 1.25;
-      margin: 0;
-    }
-
-    .importance-cards-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 16px;
-      margin-bottom: 0;
-    }
-
-    .importance-card {
-      background-color: var(--ahi-white);
-      border: 1px solid var(--ahi-border-light);
-      border-radius: 5px;
-      padding: 16px 16px 18px 16px;
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    }
-
-    .importance-card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-hover);
-      border-color: #CBD5E1;
-    }
-
-    .importance-card-icon {
-      width: 34px;
-      height: 34px;
-      border-radius: 5px;
-      background-color: #E2E8F0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #163865;
-      margin-bottom: 12px;
-      flex-shrink: 0;
-    }
-
-    .importance-card-icon svg {
-      width: 18px;
-      height: 18px;
-    }
-
-    .importance-card-title {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--ahi-text-heading);
-      margin: 0;
-      line-height: 1.35;
-      letter-spacing: -0.01em;
-    }
-
     /* ==========================================================================
-       SECTION 05B · NATIONWIDE EMERGENCY HVAC DISPATCH (FULL-WIDTH NAVY BANNER)
-       Spacing: Exactly 40px vertical spacing
-       Layout: Full-Width Navy Banner with 2-Column Responsive Grid
+       SECTION 05 · THE IMPORTANCE OF FAST REPAIR (COMPACT BLENDED SHOWCASE)
+       Spacing: Exactly 40px vertical spacing (Compact Rhythm)
+       Layout: Compact dark navy section with seamlessly blended technician photo
        ========================================================================== */
-    .section-dispatch-banner {
+    .section-importance-showcase {
       width: 100%;
-      background-color: #102F58;
-      background-image: linear-gradient(135deg, #102F58 0%, #0A2240 100%);
-      padding: 40px 0;
+      background-color: #0E2544;
+      background-image: linear-gradient(135deg, #0F2A4D 0%, #081B33 100%);
+      padding: 38px 0;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       position: relative;
+      overflow: hidden;
     }
 
-    .dispatch-banner-grid {
+    .importance-showcase-grid {
       display: grid;
-      grid-template-columns: 460px 1fr;
-      gap: 48px;
+      grid-template-columns: 55% 45%;
+      gap: 32px;
       align-items: center;
     }
 
-    .dispatch-banner-media {
-      position: relative;
-      width: 100%;
-      height: 310px;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.35);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .dispatch-banner-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 25%;
-      display: block;
-    }
-
-    .dispatch-banner-content {
+    .importance-showcase-content {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
-      color: #FFFFFF;
+      padding-right: 8px;
     }
 
-    .dispatch-banner-eyebrow {
-      font-size: 12.5px;
-      font-weight: 700;
-      color: #93C5FD;
-      letter-spacing: 0.08em;
+    .importance-eyebrow-wrap {
+      margin-bottom: 8px;
+    }
+
+    .importance-eyebrow-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: #FFFFFF;
       text-transform: uppercase;
-      margin-bottom: 10px;
-      font-family: 'Montserrat', sans-serif;
+      line-height: 1.2;
+      display: inline-block;
     }
 
-    .dispatch-banner-heading {
-      font-size: 28px;
-      font-weight: 700;
+    .importance-showcase-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 34px;
+      font-weight: 800;
       color: #FFFFFF;
-      line-height: 1.25;
-      letter-spacing: -0.015em;
-      margin: 0 0 14px 0;
-      font-family: 'Montserrat', sans-serif;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin: 0 0 10px 0;
     }
 
-    .dispatch-banner-desc {
-      font-size: 15px;
-      color: rgba(255, 255, 255, 0.88);
-      line-height: 1.6;
-      margin: 0 0 24px 0;
+    .importance-showcase-desc {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      color: #CBD5E1;
+      line-height: 1.5;
+      margin: 0 0 18px 0;
       max-width: 580px;
-      font-family: 'Montserrat', sans-serif;
     }
 
-    .dispatch-banner-actions {
+    /* 5 Benefit Points (Tick-Mark List) */
+    .importance-benefits-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      gap: 10px 32px;
+    }
+
+    .importance-benefit-item {
       display: flex;
       align-items: center;
-      gap: 16px;
-    }
-
-    .btn-dispatch-cta {
-      background-color: #FFFFFF;
-      color: #163865;
-      font-size: 14px;
-      font-weight: 700;
-      height: 44px;
-      padding: 0 24px;
-      border-radius: 6px;
-      display: inline-flex;
-      align-items: center;
       gap: 9px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      text-decoration: none;
       font-family: 'Montserrat', sans-serif;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #FFFFFF;
+      line-height: 1.3;
     }
 
-    .btn-dispatch-cta svg {
+    .importance-check-icon {
       width: 16px;
       height: 16px;
-      stroke: #163865;
+      stroke: #FFFFFF;
       stroke-width: 2.5;
-      transition: transform 0.2s ease;
+      flex-shrink: 0;
     }
 
-    .btn-dispatch-cta:hover {
-      background-color: #F8FAFC;
-      color: #0F2744;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+    /* Right Column: Seamlessly Blended HVAC Technician Media */
+    .importance-showcase-media {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 280px;
+      max-height: 330px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      overflow: hidden;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      background: transparent;
     }
 
-    .btn-dispatch-cta:hover svg {
-      transform: translateX(3px);
+    .importance-showcase-media::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, #0E2544 0%, rgba(14, 37, 68, 0.6) 20%, transparent 55%),
+                  linear-gradient(to top, #081B33 0%, transparent 20%),
+                  linear-gradient(to bottom, #0F2A4D 0%, transparent 20%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .importance-showcase-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.3) 8%, black 30%);
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.3) 8%, black 30%);
     }
 
     .btn-importance-cta svg {
@@ -1590,10 +1532,11 @@
       overflow: hidden;
       box-shadow: 0 4px 20px rgba(16, 47, 88, 0.06);
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 50% 50%;
       height: 390px;
       min-height: 390px;
       max-height: 390px;
+      box-sizing: border-box;
     }
 
     .industry-detail-card[hidden] {
@@ -1619,8 +1562,11 @@
       background-color: #E2E8F0;
       overflow: hidden;
       display: flex;
-      height: 100%;
+      width: 100%;
+      height: 390px;
       min-height: 390px;
+      max-height: 390px;
+      box-sizing: border-box;
     }
 
     .industry-panel-img {
@@ -1642,7 +1588,10 @@
       background-color: #FFFFFF;
       height: 390px;
       min-height: 390px;
+      max-height: 390px;
+      min-width: 0;
       box-sizing: border-box;
+      overflow: hidden;
     }
 
     .industry-card-eyebrow {
@@ -1659,12 +1608,13 @@
 
     .industry-card-heading {
       font-family: 'Montserrat', sans-serif;
-      font-size: 25px;
+      font-size: 23px;
       font-weight: 600;
       color: var(--ahi-text-heading);
       line-height: 1.25;
       margin: 0 0 10px 0;
       letter-spacing: -0.01em;
+      white-space: nowrap;
     }
 
     .industry-card-desc {
@@ -2547,8 +2497,8 @@
       .industries-grid-6col {
         grid-template-columns: repeat(2, 1fr);
       }
-      .importance-cards-grid {
-        grid-template-columns: repeat(3, 1fr);
+      .importance-showcase-title {
+        font-size: 34px;
       }
       .nav-links-menu {
         gap: 36px;
@@ -2580,15 +2530,16 @@
       .what-is-photo-wrapper img {
         height: 380px;
       }
-      .dispatch-banner-grid {
+      .importance-showcase-grid {
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 24px;
       }
-      .dispatch-banner-media {
-        height: 250px;
+      .importance-showcase-media {
+        min-height: 240px;
+        max-height: 280px;
       }
-      .dispatch-banner-heading {
-        font-size: 24px;
+      .importance-showcase-title {
+        font-size: 28px;
       }
       .how-it-works-process {
         grid-template-columns: 1fr;
@@ -2670,14 +2621,16 @@
       .importance-title {
         font-size: 28px;
       }
-      .importance-cards-grid {
+      .importance-benefits-list {
         grid-template-columns: 1fr;
+        gap: 8px;
       }
-      .dispatch-banner-heading {
-        font-size: 22px;
+      .importance-showcase-title {
+        font-size: 24px;
       }
-      .dispatch-banner-media {
-        height: 200px;
+      .importance-showcase-media {
+        min-height: 200px;
+        max-height: 240px;
       }
       .emergencies-grid-6col,
       .industries-grid-6col {
@@ -2950,7 +2903,7 @@
             <li class="hero-breadcrumb-sep" aria-hidden="true">/</li>
             <li class="hero-breadcrumb-item"><a href="#" class="hero-breadcrumb-link">Commercial</a></li>
             <li class="hero-breadcrumb-sep" aria-hidden="true">/</li>
-            <li class="hero-breadcrumb-item"><a href="#" class="hero-breadcrumb-link">Maintenance &amp; Lifestyle</a></li>
+            <li class="hero-breadcrumb-item"><a href="#" class="hero-breadcrumb-link">Repair &amp; Rapid Response</a></li>
             <li class="hero-breadcrumb-sep" aria-hidden="true">/</li>
             <li class="hero-breadcrumb-item hero-breadcrumb-current" aria-current="page">Emergency HVAC Repair</li>
           </ol>
@@ -3246,107 +3199,68 @@
   </section>
 
   <!-- ==========================================================================
-       SECTION 05 · THE IMPORTANCE OF FAST REPAIR (LIGHT THEME)
-       Spacing: Exactly 40px vertical spacing
-       Layout: Heading -> 5 Cards Grid -> Banner (Image on Left, Navy CTA Card on Right)
-       Reference: imp of emergency hvac.png & user layout reference
+       SECTION 05 · THE IMPORTANCE OF FAST REPAIR (COMPACT BLENDED SHOWCASE)
+       Spacing: Exactly 40px vertical spacing (Compact Rhythm)
+       Layout: Compact dark navy section with seamlessly blended technician photo
        ========================================================================== -->
-  <section class="section-importance" aria-labelledby="importance-heading">
+  <section class="section-importance-showcase" id="importance-section" aria-labelledby="importance-heading">
     <div class="container">
-      
-      <!-- Section Heading -->
-      <div class="importance-header">
-        <span class="section-eyebrow importance-kicker">OPERATIONAL CONTINUITY</span>
-        <h2 id="importance-heading" class="importance-title">The Importance of Fast, Efficient HVAC Repair</h2>
-      </div>
-
-      <!-- 5 Benefit Cards Grid -->
-      <div class="importance-cards-grid">
+      <div class="importance-showcase-grid">
         
-        <!-- Card 1 -->
-        <div class="importance-card">
-          <div class="importance-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
+        <!-- Left Column: Typographic Hierarchy & Benefit Points -->
+        <div class="importance-showcase-content">
+          <div class="importance-eyebrow-wrap">
+            <span class="importance-eyebrow-text">24/7 NATIONWIDE RESPONSE</span>
           </div>
-          <h3 class="importance-card-title">Minimising Downtime</h3>
-        </div>
 
-        <!-- Card 2 -->
-        <div class="importance-card">
-          <div class="importance-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              <polyline points="9 12 11 14 15 10"></polyline>
-            </svg>
-          </div>
-          <h3 class="importance-card-title">Preventing Damage</h3>
-        </div>
+          <h2 id="importance-heading" class="importance-showcase-title">
+            The Importance of<br>Fast, Efficient HVAC<br>Repair
+          </h2>
 
-        <!-- Card 3 -->
-        <div class="importance-card">
-          <div class="importance-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"></path>
-            </svg>
-          </div>
-          <h3 class="importance-card-title">Maintaining Comfort</h3>
-        </div>
+          <p class="importance-showcase-desc">
+            With certified engineers stationed across New Zealand, AHI Carrier delivers 24/7 rapid emergency dispatch, expert diagnostics, and genuine Carrier parts to minimise downtime.
+          </p>
 
-        <!-- Card 4 -->
-        <div class="importance-card">
-          <div class="importance-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
-              <line x1="9" y1="22" x2="9" y2="22.01"></line>
-              <line x1="15" y1="22" x2="15" y2="22.01"></line>
-            </svg>
-          </div>
-          <h3 class="importance-card-title">Protecting Operations</h3>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="importance-card">
-          <div class="importance-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-            </svg>
-          </div>
-          <h3 class="importance-card-title">Restoring Performance</h3>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SECTION 05B · NATIONWIDE EMERGENCY HVAC DISPATCH (FULL-WIDTH NAVY BANNER)
-       Spacing: Exactly 40px vertical spacing
-       ========================================================================== -->
-  <section class="section-dispatch-banner" aria-label="Nationwide Emergency Dispatch">
-    <div class="container">
-      <div class="dispatch-banner-grid">
-        <div class="dispatch-banner-media">
-          <img src="Reference files/imp of emergency hvac.jpeg" alt="AHI Carrier certified emergency HVAC engineer conducting diagnostic repairs on rooftop commercial equipment" class="dispatch-banner-img" loading="lazy">
-        </div>
-
-        <div class="dispatch-banner-content">
-          <span class="dispatch-banner-eyebrow">24/7 NATIONWIDE RESPONSE</span>
-          <h2 class="dispatch-banner-heading">Fast repairs keep you running</h2>
-          <p class="dispatch-banner-desc">With certified engineers stationed across New Zealand, AHI Carrier delivers 24/7 rapid emergency dispatch, expert diagnostics, and genuine Carrier parts to minimise downtime.</p>
-          <div class="dispatch-banner-actions">
-            <a href="#request-repair" class="btn-dispatch-cta">
-              <span>Book a Service Call</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
+          <!-- 5 Benefit Points (Tick-Mark List) -->
+          <ul class="importance-benefits-list">
+            <li class="importance-benefit-item">
+              <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
-            </a>
-          </div>
+              <span>Minimising Downtime</span>
+            </li>
+            <li class="importance-benefit-item">
+              <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Maintaining Comfort</span>
+            </li>
+            <li class="importance-benefit-item">
+              <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Restoring Performance</span>
+            </li>
+            <li class="importance-benefit-item">
+              <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Preventing Damage</span>
+            </li>
+            <li class="importance-benefit-item">
+              <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Protecting Operations</span>
+            </li>
+          </ul>
         </div>
+
+        <!-- Right Column: Blended HVAC Technician Image -->
+        <div class="importance-showcase-media">
+          <img src="Reference files/imp of emergency hvac.jpeg" alt="AHI Carrier certified emergency HVAC engineer conducting diagnostic repairs on rooftop commercial equipment" class="importance-showcase-img" loading="lazy">
+        </div>
+
       </div>
     </div>
   </section>
@@ -3429,7 +3343,7 @@
   <section class="section-industries" aria-labelledby="industries-heading">
     <div class="container">
       <div class="industry-focus-header">
-        <span class="section-eyebrow industries-kicker">CRITICAL SECTOR UPTIME</span>
+        <span class="section-eyebrow industries-kicker">WHERE IT APPLIES</span>
         <h2 id="industries-heading" class="industry-focus-title">Industries We Support Across New Zealand</h2>
         <p class="industry-focus-subhead">Delivering emergency HVAC repair tailored to the operational demands, compliance criteria, and uptime requirements of essential commercial and industrial sectors.</p>
       </div>
@@ -3451,7 +3365,7 @@
         </div>
         <div class="industry-info-col">
           <span class="industry-card-eyebrow">HEALTHCARE &amp; SURGICAL THEATRES</span>
-          <h3 class="industry-card-heading">Critical care cannot pause for climate failure.</h3>
+          <h3 class="industry-card-heading">Zero downtime for critical care.</h3>
           <p class="industry-card-desc">Protecting critical patient care facilities, surgical suites, and clinical laboratories with rapid, compliant HVAC stabilization.</p>
           <ul class="industry-points-list">
             <li class="industry-point-item">
@@ -3487,7 +3401,7 @@
         </div>
         <div class="industry-info-col">
           <span class="industry-card-eyebrow">HIGH-DENSITY DATA CENTRES</span>
-          <h3 class="industry-card-heading">Protecting thermal stability and server uptime.</h3>
+          <h3 class="industry-card-heading">Protecting server uptime and stability.</h3>
           <p class="industry-card-desc">Safeguarding high-density server racks and mission-critical hardware against thermal excursions and unplanned downtime.</p>
           <ul class="industry-points-list">
             <li class="industry-point-item">
@@ -3559,7 +3473,7 @@
         </div>
         <div class="industry-info-col">
           <span class="industry-card-eyebrow">COMMERCIAL TOWERS &amp; OFFICES</span>
-          <h3 class="industry-card-heading">Preserving workplace productivity and tenant comfort.</h3>
+          <h3 class="industry-card-heading">Preserving tenant comfort and productivity.</h3>
           <p class="industry-card-desc">Restoring corporate office air systems swiftly to preserve tenant comfort, productivity, and air quality.</p>
           <ul class="industry-points-list">
             <li class="industry-point-item">
@@ -3595,7 +3509,7 @@
         </div>
         <div class="industry-info-col">
           <span class="industry-card-eyebrow">HOTELS, RESORTS &amp; VENUES</span>
-          <h3 class="industry-card-heading">Seamless 24/7 guest comfort across every room.</h3>
+          <h3 class="industry-card-heading">Seamless 24/7 guest comfort guaranteed.</h3>
           <p class="industry-card-desc">Delivering fast, discreet emergency climate restoration to ensure flawless 24/7 guest comfort and satisfaction.</p>
           <ul class="industry-points-list">
             <li class="industry-point-item">
@@ -3631,7 +3545,7 @@
         </div>
         <div class="industry-info-col">
           <span class="industry-card-eyebrow">RETAIL CENTRES &amp; MALLS</span>
-          <h3 class="industry-card-heading">Protecting footfall, shopping comfort, and inventory.</h3>
+          <h3 class="industry-card-heading">Protecting shopper comfort and inventory.</h3>
           <p class="industry-card-desc">Rapidly stabilizing shopping centre climate controls to protect customer footfall and temperature-sensitive stock.</p>
           <ul class="industry-points-list">
             <li class="industry-point-item">

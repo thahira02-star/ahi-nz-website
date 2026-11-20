@@ -1593,10 +1593,11 @@
       overflow: hidden;
       box-shadow: 0 4px 20px rgba(16, 47, 88, 0.06);
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 50% 50%;
       height: 390px;
       min-height: 390px;
       max-height: 390px;
+      box-sizing: border-box;
     }
 
     .industry-detail-card[hidden] {
@@ -1622,8 +1623,11 @@
       background-color: #E2E8F0;
       overflow: hidden;
       display: flex;
-      height: 100%;
+      width: 100%;
+      height: 390px;
       min-height: 390px;
+      max-height: 390px;
+      box-sizing: border-box;
     }
 
     .industry-panel-img {
@@ -1643,6 +1647,12 @@
       justify-content: center;
       background-color: #FFFFFF;
       height: 390px;
+      min-height: 390px;
+      max-height: 390px;
+      min-width: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
       min-height: 390px;
       box-sizing: border-box;
     }
@@ -2303,7 +2313,7 @@
       background-color: #FFFFFF;
       border: 1px solid #E2E8F0;
       border-radius: 12px;
-      padding: 12px;
+      padding: 10px;
       box-sizing: border-box;
       box-shadow: 0 2px 8px rgba(16, 47, 88, 0.04);
       cursor: pointer;
@@ -2320,12 +2330,12 @@
     /* Carefully Proportioned Machinery Photo Frame */
     .equipment-photo-frame {
       width: 100%;
-      height: 125px;
+      height: 110px;
       border-radius: 8px;
       overflow: hidden;
       position: relative;
       background-color: #EDF2F7;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .equipment-machinery-img {
@@ -2385,32 +2395,35 @@
 
     .equipment-item-title {
       font-family: 'Montserrat', sans-serif;
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 700;
       color: #163865;
-      line-height: 1.3;
-      margin: 0 0 10px 0;
-      min-height: 35px;
+      line-height: 1.25;
+      margin: 0 0 8px 0;
+      min-height: 33px;
     }
 
     .equipment-metrics-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 4px;
+      gap: 5px;
       margin-top: auto;
     }
 
     .equipment-metric-chip {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       background-color: #F8FAFC;
       border: 1px solid #E2E8F0;
       border-radius: 4px;
-      padding: 2.5px 7px;
-      font-size: 11px;
+      padding: 3px 8px;
+      font-size: 10.5px;
       font-weight: 500;
       color: #475569;
-      line-height: 1.3;
+      line-height: 1.2;
       transition: all 0.2s ease;
+      white-space: nowrap;
     }
 
     .equipment-dir-item:hover .equipment-metric-chip {
@@ -4279,8 +4292,8 @@
           <div class="equipment-item-body">
             <h3 class="equipment-item-title">Water &amp; Air-Cooled Chillers</h3>
             <div class="equipment-metrics-list">
-              <span class="equipment-metric-chip">Bearing wear</span>
-              <span class="equipment-metric-chip">Approach delta</span>
+              <span class="equipment-metric-chip">Bearings</span>
+              <span class="equipment-metric-chip">Delta-T</span>
               <span class="equipment-metric-chip">Lubrication</span>
             </div>
           </div>
@@ -4294,8 +4307,9 @@
           <div class="equipment-item-body">
             <h3 class="equipment-item-title">Variable Refrigerant Flow (VRF)</h3>
             <div class="equipment-metrics-list">
-              <span class="equipment-metric-chip">Inverter harmonics</span>
-              <span class="equipment-metric-chip">Refrigerant sat.</span>
+              <span class="equipment-metric-chip">Inverter</span>
+              <span class="equipment-metric-chip">Voltage</span>
+              <span class="equipment-metric-chip">Refrigerant</span>
             </div>
           </div>
         </article>
@@ -4308,8 +4322,9 @@
           <div class="equipment-item-body">
             <h3 class="equipment-item-title">Air Handling Units (AHU)</h3>
             <div class="equipment-metrics-list">
-              <span class="equipment-metric-chip">Fan vibration</span>
-              <span class="equipment-metric-chip">Filter pressures</span>
+              <span class="equipment-metric-chip">Vibration</span>
+              <span class="equipment-metric-chip">Airflow</span>
+              <span class="equipment-metric-chip">Filtration</span>
             </div>
           </div>
         </article>
@@ -4322,9 +4337,9 @@
           <div class="equipment-item-body">
             <h3 class="equipment-item-title">Industrial Cooling Towers</h3>
             <div class="equipment-metrics-list">
-              <span class="equipment-metric-chip">Gearboxes</span>
-              <span class="equipment-metric-chip">Drive shafts</span>
-              <span class="equipment-metric-chip">Water balance</span>
+              <span class="equipment-metric-chip">Gearbox</span>
+              <span class="equipment-metric-chip">Drives</span>
+              <span class="equipment-metric-chip">Water</span>
             </div>
           </div>
         </article>
@@ -4337,9 +4352,9 @@
           <div class="equipment-item-body">
             <h3 class="equipment-item-title">Rooftop Packaged HVAC Units</h3>
             <div class="equipment-metrics-list">
-              <span class="equipment-metric-chip">Compressor load</span>
-              <span class="equipment-metric-chip">Fan motors</span>
-              <span class="equipment-metric-chip">Economizers</span>
+              <span class="equipment-metric-chip">Compressor</span>
+              <span class="equipment-metric-chip">Fans</span>
+              <span class="equipment-metric-chip">Economizer</span>
             </div>
           </div>
         </article>
@@ -4352,8 +4367,8 @@
           <div class="equipment-item-body">
             <h3 class="equipment-item-title">Hydronic Pumping Stations</h3>
             <div class="equipment-metrics-list">
-              <span class="equipment-metric-chip">Mechanical seals</span>
-              <span class="equipment-metric-chip">Impeller wear</span>
+              <span class="equipment-metric-chip">Seals</span>
+              <span class="equipment-metric-chip">Impeller</span>
               <span class="equipment-metric-chip">Cavitation</span>
             </div>
           </div>

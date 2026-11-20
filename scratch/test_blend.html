@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: #f0f2f5; }
+    .container { width: 100%; max-width: 1290px; margin: 0 auto; padding: 0 32px; }
+
+    /* Approach A: Section Background (exactly like predictive-maintenance case study & hero) */
+    .approach-a {
+      width: 100%;
+      background-color: #0E2544;
+      background-image: 
+        linear-gradient(90deg, #0E2544 0%, #0E2544 42%, rgba(14, 37, 68, 0.90) 52%, rgba(14, 37, 68, 0.25) 72%, rgba(8, 27, 51, 0.75) 100%),
+        url('../Reference files/imp of emergency hvac.jpeg');
+      background-size: cover;
+      background-position: right center;
+      background-repeat: no-repeat;
+      padding: 40px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .importance-showcase-grid {
+      display: grid;
+      grid-template-columns: 58% 42%;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .importance-showcase-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .importance-eyebrow-text {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+
+    .importance-showcase-title {
+      font-size: 34px;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin: 0 0 10px 0;
+    }
+
+    .importance-showcase-desc {
+      font-size: 14px;
+      color: #CBD5E1;
+      line-height: 1.5;
+      margin: 0 0 18px 0;
+      max-width: 580px;
+    }
+
+    .importance-benefits-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      gap: 10px 32px;
+    }
+
+    .importance-benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #FFFFFF;
+    }
+
+    .importance-check-icon {
+      width: 16px;
+      height: 16px;
+      stroke: #FFFFFF;
+      stroke-width: 2.5;
+    }
+
+    .importance-spacer-col {
+      min-height: 280px;
+    }
+  </style>
+</head>
+<body>
+  <div class="approach-a">
+    <div class="container">
+      <div class="importance-showcase-grid">
+        <div class="importance-showcase-content">
+          <span class="importance-eyebrow-text">24/7 NATIONWIDE RESPONSE</span>
+          <h2 class="importance-showcase-title">The Importance of<br>Fast, Efficient HVAC<br>Repair</h2>
+          <p class="importance-showcase-desc">With certified engineers stationed across New Zealand, AHI Carrier delivers 24/7 rapid emergency dispatch, expert diagnostics, and genuine Carrier parts to minimise downtime.</p>
+          <ul class="importance-benefits-list">
+            <li class="importance-benefit-item">
+              <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Minimising Downtime</span>
+            </li>
+            <li class="importance-benefit-item">
+              <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Maintaining Comfort</span>
+            </li>
+            <li class="importance-benefit-item">
+              <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Restoring Performance</span>
+            </li>
+            <li class="importance-benefit-item">
+              <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Preventing Damage</span>
+            </li>
+            <li class="importance-benefit-item">
+              <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Protecting Operations</span>
+            </li>
+          </ul>
+        </div>
+        <div class="importance-spacer-col"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
