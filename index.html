@@ -795,7 +795,6 @@
     .importance-kicker,
     .emergencies-kicker,
     .industries-kicker,
-    .form-panel-kicker,
     .services-kicker {
       font-family: 'Montserrat', sans-serif;
       font-size: 13px;
@@ -1242,27 +1241,59 @@
        ========================================================================== */
     .section-importance-showcase {
       width: 100%;
+      position: relative;
       background-color: #0E2544;
-      background-image: linear-gradient(135deg, #0F2A4D 0%, #081B33 100%);
       padding: 38px 0;
+      overflow: hidden;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      position: relative;
-      overflow: hidden;
     }
 
-    .importance-showcase-grid {
-      display: grid;
-      grid-template-columns: 55% 45%;
-      gap: 32px;
-      align-items: center;
+    /* Unblurred technician photo with crisp focus */
+    .section-importance-showcase::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('Reference files/imp of emergency hvac.jpeg');
+      background-size: cover;
+      background-position: center right;
+      background-repeat: no-repeat;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Dual Linear Gradient Overlay: Brand Carrier Navy (#163865) transitioning to soft luminous white sheen */
+    .section-importance-showcase::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: 
+        linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0) 45%),
+        linear-gradient(90deg, 
+          #163865 0%, 
+          #163865 40%, 
+          rgba(22, 56, 101, 0.90) 54%, 
+          rgba(22, 56, 101, 0.40) 72%, 
+          rgba(255, 255, 255, 0.12) 88%, 
+          rgba(22, 56, 101, 0.20) 100%
+        );
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .section-importance-showcase .container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: flex-start;
     }
 
     .importance-showcase-content {
+      max-width: 780px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      padding-right: 8px;
+      align-items: flex-start;
+      text-align: left;
     }
 
     .importance-eyebrow-wrap {
@@ -1271,7 +1302,7 @@
 
     .importance-eyebrow-text {
       font-family: 'Montserrat', sans-serif;
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 600;
       letter-spacing: 0.12em;
       color: #FFFFFF;
@@ -1282,88 +1313,51 @@
 
     .importance-showcase-title {
       font-family: 'Montserrat', sans-serif;
-      font-size: 34px;
-      font-weight: 800;
+      font-size: 32px;
+      font-weight: 600;
       color: #FFFFFF;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      margin: 0 0 10px 0;
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+      margin: 0 0 12px 0;
+      max-width: 560px;
     }
 
     .importance-showcase-desc {
       font-family: 'Montserrat', sans-serif;
-      font-size: 14px;
+      font-size: 13.5px;
       color: #CBD5E1;
-      line-height: 1.5;
+      line-height: 1.55;
       margin: 0 0 18px 0;
-      max-width: 580px;
+      max-width: 780px;
     }
 
-    /* 5 Benefit Points (Tick-Mark List) */
+    /* 4 Benefit Points (Solid White Circular Badges matching target) */
     .importance-benefits-list {
       list-style: none;
       padding: 0;
       margin: 0;
       display: grid;
       grid-template-columns: repeat(2, max-content);
-      gap: 10px 32px;
+      gap: 12px 36px;
+      max-width: 520px;
     }
 
     .importance-benefit-item {
       display: flex;
       align-items: center;
-      gap: 9px;
+      gap: 10px;
       font-family: 'Montserrat', sans-serif;
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 500;
       color: #FFFFFF;
       line-height: 1.3;
     }
 
-    .importance-check-icon {
-      width: 16px;
-      height: 16px;
-      stroke: #FFFFFF;
-      stroke-width: 2.5;
+    .importance-check-badge {
+      width: 18px;
+      height: 18px;
       flex-shrink: 0;
-    }
-
-    /* Right Column: Seamlessly Blended HVAC Technician Media */
-    .importance-showcase-media {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      min-height: 280px;
-      max-height: 330px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      overflow: hidden;
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
-      background: transparent;
-    }
-
-    .importance-showcase-media::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to right, #0E2544 0%, rgba(14, 37, 68, 0.6) 20%, transparent 55%),
-                  linear-gradient(to top, #081B33 0%, transparent 20%),
-                  linear-gradient(to bottom, #0F2A4D 0%, transparent 20%);
-      z-index: 2;
-      pointer-events: none;
-    }
-
-    .importance-showcase-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 20%;
       display: block;
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.3) 8%, black 30%);
-      mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.3) 8%, black 30%);
     }
 
     .btn-importance-cta svg {
@@ -1900,14 +1894,16 @@
       position: relative;
     }
 
-    .form-panel-top-kicker {
-      font-size: 11px;
+    .form-panel-top-kicker,
+    .form-panel-kicker {
+      font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.14em;
-      color: var(--ahi-blue-cyan);
+      color: #FFFFFF !important;
+      opacity: 1 !important;
       text-transform: uppercase;
       margin-bottom: 12px;
-      display: block;
+      display: inline-block;
     }
 
     .form-panel-title {
@@ -2530,16 +2526,15 @@
       .what-is-photo-wrapper img {
         height: 380px;
       }
-      .importance-showcase-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
+      .section-importance-showcase::before {
+        background-position: 80% center;
       }
-      .importance-showcase-media {
-        min-height: 240px;
-        max-height: 280px;
+      .importance-showcase-content {
+        max-width: 100%;
       }
       .importance-showcase-title {
         font-size: 28px;
+        max-width: 100%;
       }
       .how-it-works-process {
         grid-template-columns: 1fr;
@@ -2627,10 +2622,7 @@
       }
       .importance-showcase-title {
         font-size: 24px;
-      }
-      .importance-showcase-media {
-        min-height: 200px;
-        max-height: 240px;
+        max-width: 100%;
       }
       .emergencies-grid-6col,
       .industries-grid-6col {
@@ -2850,7 +2842,8 @@
               <!-- Panel 3: Repair & Rapid Response (Reference files/Repair & Rapid Response.png) -->
               <div class="mega-subpanel" id="panel-repair">
                 <ul class="mega-subitems-list">
-                  <li><a href="#request-repair" class="mega-subitem-link">Energy HVAC Repairs</a></li>
+                  <li><a href="#request-repair" class="mega-subitem-link">Emergency HVAC Repairs</a></li>
+                  <li><a href="preventative-maintenance.html" class="mega-subitem-link">Preventative Maintenance</a></li>
                   <li><a href="#compressor-services" class="mega-subitem-link">Compressor Services</a></li>
                 </ul>
               </div>
@@ -2859,9 +2852,9 @@
               <div class="mega-subpanel active" id="panel-maintenance">
                 <ul class="mega-subitems-list">
                   <li><a href="#planned-maintenance" class="mega-subitem-link">Planned HVAC Maintenance</a></li>
-                  <li><a href="#preventive-maintenance" class="mega-subitem-link">Preventive Maintenance</a></li>
+                  <li><a href="preventative-maintenance.html" class="mega-subitem-link">Preventative Maintenance</a></li>
                   <li><a href="predictive-maintenance.html" class="mega-subitem-link">Predictive Maintenance</a></li>
-                  <li><a href="#chiller-maintenance" class="mega-subitem-link">Chiller Maintenance</a></li>
+                  <li><a href="chiller-maintenance.html" class="mega-subitem-link">Chiller Maintenance</a></li>
                 </ul>
               </div>
 
@@ -3199,68 +3192,57 @@
   </section>
 
   <!-- ==========================================================================
-       SECTION 05 · THE IMPORTANCE OF FAST REPAIR (COMPACT BLENDED SHOWCASE)
+       SECTION 05 · THE IMPORTANCE OF FAST REPAIR (FULL-WIDTH AMBIENT SHOWCASE)
        Spacing: Exactly 40px vertical spacing (Compact Rhythm)
-       Layout: Compact dark navy section with seamlessly blended technician photo
+       Layout: Full-width background image with seamless duotone navy blend
        ========================================================================== -->
   <section class="section-importance-showcase" id="importance-section" aria-labelledby="importance-heading">
     <div class="container">
-      <div class="importance-showcase-grid">
-        
-        <!-- Left Column: Typographic Hierarchy & Benefit Points -->
-        <div class="importance-showcase-content">
-          <div class="importance-eyebrow-wrap">
-            <span class="importance-eyebrow-text">24/7 NATIONWIDE RESPONSE</span>
-          </div>
-
-          <h2 id="importance-heading" class="importance-showcase-title">
-            The Importance of<br>Fast, Efficient HVAC<br>Repair
-          </h2>
-
-          <p class="importance-showcase-desc">
-            With certified engineers stationed across New Zealand, AHI Carrier delivers 24/7 rapid emergency dispatch, expert diagnostics, and genuine Carrier parts to minimise downtime.
-          </p>
-
-          <!-- 5 Benefit Points (Tick-Mark List) -->
-          <ul class="importance-benefits-list">
-            <li class="importance-benefit-item">
-              <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Minimising Downtime</span>
-            </li>
-            <li class="importance-benefit-item">
-              <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Maintaining Comfort</span>
-            </li>
-            <li class="importance-benefit-item">
-              <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Restoring Performance</span>
-            </li>
-            <li class="importance-benefit-item">
-              <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Preventing Damage</span>
-            </li>
-            <li class="importance-benefit-item">
-              <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Protecting Operations</span>
-            </li>
-          </ul>
+      <!-- Typographic Hierarchy & Benefit Points -->
+      <div class="importance-showcase-content">
+        <div class="importance-eyebrow-wrap">
+          <span class="importance-eyebrow-text">24/7 NATIONWIDE RESPONSE</span>
         </div>
 
-        <!-- Right Column: Blended HVAC Technician Image -->
-        <div class="importance-showcase-media">
-          <img src="Reference files/imp of emergency hvac.jpeg" alt="AHI Carrier certified emergency HVAC engineer conducting diagnostic repairs on rooftop commercial equipment" class="importance-showcase-img" loading="lazy">
-        </div>
+        <h2 id="importance-heading" class="importance-showcase-title">
+          The Importance of Fast, Efficient<br>HVAC Repair
+        </h2>
 
+        <p class="importance-showcase-desc">
+          With certified engineers stationed across New Zealand, AHI Carrier delivers 24/7 rapid emergency dispatch, expert diagnostics, and genuine Carrier parts to minimise downtime.
+        </p>
+
+        <!-- 4 Benefit Points (Solid White Circular Badges matching target) -->
+        <ul class="importance-benefits-list">
+          <li class="importance-benefit-item">
+            <svg class="importance-check-badge" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="10" fill="#FFFFFF"/>
+              <path d="M6 10.2L8.7 13L14.2 7.5" stroke="#163865" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Minimising Downtime</span>
+          </li>
+          <li class="importance-benefit-item">
+            <svg class="importance-check-badge" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="10" fill="#FFFFFF"/>
+              <path d="M6 10.2L8.7 13L14.2 7.5" stroke="#163865" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Maintaining Comfort</span>
+          </li>
+          <li class="importance-benefit-item">
+            <svg class="importance-check-badge" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="10" fill="#FFFFFF"/>
+              <path d="M6 10.2L8.7 13L14.2 7.5" stroke="#163865" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Restoring Performance</span>
+          </li>
+          <li class="importance-benefit-item">
+            <svg class="importance-check-badge" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="10" fill="#FFFFFF"/>
+              <path d="M6 10.2L8.7 13L14.2 7.5" stroke="#163865" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Preventing Damage</span>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -3587,7 +3569,7 @@
         <!-- Left Panel: Dark Navy Value & Contact (530px) -->
         <div class="form-left-panel">
           <div>
-            <span class="section-eyebrow form-panel-kicker">24/7 RAPID DISPATCH</span>
+            <span class="section-eyebrow form-panel-kicker" style="color: #FFFFFF !important; opacity: 1 !important;">GET STARTED</span>
             <h2 id="form-card-title" class="form-panel-title">Request Emergency HVAC Repair</h2>
             <p class="form-panel-desc">Tell us about your emergency and our specialists will coordinate the required technical response to restore your plant's performance.</p>
 
@@ -3821,9 +3803,10 @@
         <div>
           <div class="footer-col-title">Services</div>
           <ul class="footer-links-list">
-            <li class="footer-link-item"><a href="#services-modern">Modernization & energy Updates</a></li>
-            <li class="footer-link-item"><a href="#services-repair">Repair & Rapid Response</a></li>
-            <li class="footer-link-item"><a href="#services-lifecycle">Smart & Lifecycle Services</a></li>
+            <li class="footer-link-item"><a href="index.html">&rsaquo; Emergency HVAC Repair</a></li>
+            <li class="footer-link-item"><a href="predictive-maintenance.html">&rsaquo; Predictive Maintenance</a></li>
+            <li class="footer-link-item"><a href="chiller-maintenance.html">&rsaquo; Chiller Maintenance</a></li>
+            <li class="footer-link-item"><a href="#services-modern">&rsaquo; Modernization &amp; Updates</a></li>
           </ul>
         </div>
 

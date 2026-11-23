@@ -1,0 +1,195 @@
+﻿/* ==========================================================================
+       SECTION 09 &middot; MULTI-TIER CORPORATE FOOTER (LOCKED EXACT REPLICA)
+       Spacing: Exactly 62px top spacing
+       ========================================================================== */
+    .corporate-footer {
+      background-color: var(--ahi-footer-bg);
+      padding-top: 62px;
+      font-size: 13px;
+      color: var(--ahi-text-body);
+    }
+
+    .footer-tier-1 {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr) 420px;
+      gap: 20px;
+      padding-bottom: 40px;
+    }
+
+    .footer-col-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ahi-text-heading);
+      margin-bottom: 16px;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-link-item a {
+      color: var(--ahi-text-body);
+      font-size: 13px;
+    }
+
+    .footer-link-item a:hover {
+      color: var(--ahi-blue-carrier);
+      text-decoration: underline;
+    }
+
+    .footer-parts-card {
+      background-color: var(--ahi-white);
+      border: 1px solid var(--ahi-border-light);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .parts-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .parts-bag-badge {
+      width: 34px;
+      height: 34px;
+      border-radius: var(--radius-sm);
+      background-color: var(--ahi-blue-tint);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ahi-navy-primary);
+      flex-shrink: 0;
+    }
+
+    .parts-card-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ahi-text-heading);
+      line-height: 1.3;
+    }
+
+    .parts-card-body {
+      font-size: 12px;
+      color: var(--ahi-text-muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .parts-brands-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .parts-toshiba-logo {
+      color: var(--ahi-red-brand);
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+    }
+
+    .parts-totaline-logo {
+      border: 1px solid var(--ahi-red-brand);
+      color: var(--ahi-red-brand);
+      font-size: 9px;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 5px;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-shop-parts {
+      background-color: var(--ahi-navy-primary);
+      color: var(--ahi-white);
+      font-size: 12px;
+      font-weight: 600;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .btn-shop-parts:hover {
+      background-color: var(--ahi-navy-hover);
+    }
+
+    .footer-tier-2 {
+      border-top: 1px solid var(--ahi-border-subtle);
+      padding: 24px 0;
+    }
+
+    .footer-contact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .footer-info-module-label {
+      font-weight: 600;
+      color: var(--ahi-text-heading);
+      margin-bottom: 6px;
+      font-size: 13px;
+    }
+
+    .footer-info-module-val {
+      color: var(--ahi-text-body);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+    }
+
+    .footer-social-icons-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .footer-social-pill {
+      width: 28px;
+      height: 28px;
+      border-radius: 5px;
+      background-color: #393a3b;
+      color: var(--ahi-white);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-tier-3 {
+      border-top: 1px solid var(--ahi-border-subtle);
+      padding: 20px 0;
+      font-size: 12px;
+      color: var(--ahi-text-muted);
+    }
+
+    .dealer-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .legal-row {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid var(--ahi-divider-rule);
+      padding-top: 12px;
+    }
+
+    .legal-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: #081B33; color: #fff; padding: 40px 0; }
+    .container { width: 100%; max-width: 1290px; margin: 0 auto; padding: 0 32px; }
+
+    .section-importance-showcase {
+      width: 100%;
+      background-color: #0E2544;
+      background-image: linear-gradient(135deg, #0F2A4D 0%, #081B33 100%);
+      padding: 38px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+    .importance-showcase-grid {
+      display: grid;
+      grid-template-columns: 56% 44%;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .importance-eyebrow-text {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+
+    .importance-showcase-title {
+      font-size: 34px;
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin: 0 0 12px 0;
+    }
+
+    .importance-showcase-desc {
+      font-size: 14px;
+      color: #CBD5E1;
+      line-height: 1.55;
+      margin: 0 0 18px 0;
+      max-width: 680px;
+    }
+
+    .importance-benefits-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      gap: 10px 32px;
+    }
+
+    .importance-benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #FFFFFF;
+    }
+
+    .importance-check-icon {
+      width: 16px;
+      height: 16px;
+      stroke: #FFFFFF;
+      stroke-width: 2.5;
+    }
+
+    /* Seamless Feathered Blend - Height Controlled (No Zoom / No Container) */
+    .importance-blend-wrap {
+      position: relative;
+      width: 100%;
+      height: 270px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .importance-blend-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+      /* Soft radial feathered blend merging 360 degrees into dark blue */
+      -webkit-mask-image: radial-gradient(ellipse 80% 75% at 55% 50%, black 40%, rgba(0,0,0,0.7) 65%, transparent 95%);
+      mask-image: radial-gradient(ellipse 80% 75% at 55% 50%, black 40%, rgba(0,0,0,0.7) 65%, transparent 95%);
+      filter: saturate(0.95) contrast(1.02);
+    }
+
+    .importance-blend-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, #0E2544 0%, rgba(14, 37, 68, 0.4) 20%, transparent 50%);
+      pointer-events: none;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="section-importance-showcase">
+    <div class="container">
+      <div class="importance-showcase-grid">
+        <div class="importance-showcase-content">
+          <span class="importance-eyebrow-text">24/7 NATIONWIDE RESPONSE</span>
+          <h2 class="importance-showcase-title">The Importance of Fast,<br>Efficient HVAC Repair</h2>
+          <p class="importance-showcase-desc">With certified engineers stationed across New Zealand, AHI Carrier delivers 24/7 rapid emergency dispatch, expert diagnostics, and genuine Carrier parts to minimise downtime.</p>
+          <ul class="importance-benefits-list">
+            <li class="importance-benefit-item"><svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Minimising Downtime</span></li>
+            <li class="importance-benefit-item"><svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Maintaining Comfort</span></li>
+            <li class="importance-benefit-item"><svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Restoring Performance</span></li>
+            <li class="importance-benefit-item"><svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Preventing Damage</span></li>
+            <li class="importance-benefit-item"><svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Protecting Operations</span></li>
+          </ul>
+        </div>
+
+        <div class="importance-blend-wrap">
+          <img src="../Reference files/imp of emergency hvac.jpeg" alt="AHI Carrier certified emergency HVAC technician" class="importance-blend-img">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

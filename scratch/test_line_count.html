@@ -1,39 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-body { font-family: 'Montserrat', sans-serif; }
-.test-hero {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.6;
-  max-width: 780px;
-  border: 1px solid red;
-  padding: 10px;
-}
-.test-hero-18 {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.6;
-  max-width: 780px;
-  border: 1px solid blue;
-  padding: 10px;
-}
-</style>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: #0E2544; color: #fff; padding: 40px; }
+    .container { width: 100%; max-width: 1290px; margin: 0 auto; }
+
+    .test-box {
+      width: 680px;
+      margin-bottom: 40px;
+      border: 1px dashed rgba(255,255,255,0.2);
+      padding: 20px;
+    }
+
+    .importance-eyebrow-text {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+
+    .title-opt1 {
+      font-size: 34px;
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin: 0 0 12px 0;
+    }
+
+    .caption-test {
+      font-size: 14px;
+      color: #CBD5E1;
+      line-height: 1.6;
+      margin: 0 0 18px 0;
+      max-width: 680px;
+    }
+  </style>
 </head>
 <body>
-<p class="test-hero" id="t16">When climate control failure threatens operations, patient care, or cold-chain logistics, AHI Carrier dispatches certified master engineers and mobile chiller units within minutes.</p>
-<p class="test-hero-18" id="t18">When climate control failure threatens operations, patient care, or cold-chain logistics, AHI Carrier dispatches certified master engineers and mobile chiller units within minutes.</p>
-<script>
-window.onload = function() {
-  var t16 = document.getElementById('t16');
-  var t18 = document.getElementById('t18');
-  console.log("t16 clientHeight:", t16.clientHeight, "scrollHeight:", t16.scrollHeight);
-  console.log("t18 clientHeight:", t18.clientHeight, "scrollHeight:", t18.scrollHeight);
-  // line-height is 16 * 1.6 = 25.6px. 2 lines + padding(20) = ~71px. 3 lines + padding = ~97px.
-  document.title = "Lines16=" + Math.round((t16.clientHeight - 20) / 25.6) + " Lines18=" + Math.round((t18.clientHeight - 20) / (18 * 1.6));
-};
-</script>
+  <div class="test-box">
+    <span class="importance-eyebrow-text">24/7 NATIONWIDE RESPONSE</span>
+    <h2 class="title-opt1">The Importance of Fast,<br>Efficient HVAC Repair</h2>
+    <p class="caption-test">With certified engineers stationed across New Zealand, AHI Carrier delivers 24/7 rapid emergency dispatch, expert diagnostics, and genuine Carrier parts to minimise downtime.</p>
+  </div>
+
+  <div class="test-box">
+    <span class="importance-eyebrow-text">24/7 NATIONWIDE RESPONSE</span>
+    <h2 class="title-opt1">The Importance of Fast, Efficient<br>HVAC Repair</h2>
+    <p class="caption-test">With certified engineers stationed across New Zealand, AHI Carrier delivers 24/7 rapid emergency dispatch, expert diagnostics, and genuine Carrier parts to minimise downtime.</p>
+  </div>
 </body>
 </html>

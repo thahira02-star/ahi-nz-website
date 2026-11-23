@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: #F8FAFC; padding: 30px; }
+    .container { width: 100%; max-width: 1290px; margin: 0 auto; }
+
+    .equipment-directory-matrix {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .equipment-dir-item {
+      display: flex;
+      flex-direction: column;
+      background-color: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 10px;
+      box-sizing: border-box;
+      box-shadow: 0 2px 8px rgba(16, 47, 88, 0.04);
+    }
+
+    .equipment-photo-frame {
+      width: 100%;
+      height: 95px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+      border: 1.5px dashed #CBD5E1;
+      margin-bottom: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .equipment-placeholder-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #163865;
+    }
+
+    .equipment-placeholder-label {
+      font-size: 9px;
+      font-weight: 600;
+      color: #64748B;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* Option 1: Stacked 100% Equal Width Chips */
+    .title-opt1 {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #163865;
+      line-height: 1.2;
+      margin: 0 0 6px 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .chips-stacked {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .chip-full {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 4px;
+      padding: 3px 6px;
+      font-size: 10px;
+      font-weight: 600;
+      color: #475569;
+      line-height: 1.2;
+      box-sizing: border-box;
+    }
+
+    /* Option 2: 1-Row 3 Equal Width Chips */
+    .chips-row3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+    }
+
+    .chip-col3 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 4px;
+      padding: 4px 2px;
+      font-size: 9px;
+      font-weight: 600;
+      color: #475569;
+      line-height: 1.1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3 style="margin-bottom: 12px; font-size: 14px; color: #163865;">Option 1: 1-Line Headings + Reduced Spacing + Stacked Chips (Every Chip 100% Equal Width)</h3>
+    <div class="equipment-directory-matrix">
+      <div class="equipment-dir-item">
+        <div class="equipment-photo-frame">
+          <div class="equipment-placeholder-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div>
+          <span class="equipment-placeholder-label">Image Placeholder</span>
+        </div>
+        <h4 class="title-opt1">Water &amp; Air Chillers</h4>
+        <div class="chips-stacked">
+          <span class="chip-full">Bearings</span>
+          <span class="chip-full">Delta-T</span>
+          <span class="chip-full">Lubrication</span>
+        </div>
+      </div>
+      <div class="equipment-dir-item">
+        <div class="equipment-photo-frame">
+          <div class="equipment-placeholder-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div>
+          <span class="equipment-placeholder-label">Image Placeholder</span>
+        </div>
+        <h4 class="title-opt1">Variable Refrigerant (VRF)</h4>
+        <div class="chips-stacked">
+          <span class="chip-full">Inverter</span>
+          <span class="chip-full">Voltage</span>
+          <span class="chip-full">Refrigerant</span>
+        </div>
+      </div>
+      <div class="equipment-dir-item">
+        <div class="equipment-photo-frame">
+          <div class="equipment-placeholder-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div>
+          <span class="equipment-placeholder-label">Image Placeholder</span>
+        </div>
+        <h4 class="title-opt1">Air Handling Units (AHU)</h4>
+        <div class="chips-stacked">
+          <span class="chip-full">Vibration</span>
+          <span class="chip-full">Airflow</span>
+          <span class="chip-full">Filtration</span>
+        </div>
+      </div>
+      <div class="equipment-dir-item">
+        <div class="equipment-photo-frame">
+          <div class="equipment-placeholder-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div>
+          <span class="equipment-placeholder-label">Image Placeholder</span>
+        </div>
+        <h4 class="title-opt1">Industrial Cooling Towers</h4>
+        <div class="chips-stacked">
+          <span class="chip-full">Gearbox</span>
+          <span class="chip-full">Drives</span>
+          <span class="chip-full">Water</span>
+        </div>
+      </div>
+      <div class="equipment-dir-item">
+        <div class="equipment-photo-frame">
+          <div class="equipment-placeholder-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div>
+          <span class="equipment-placeholder-label">Image Placeholder</span>
+        </div>
+        <h4 class="title-opt1">Rooftop Packaged Units</h4>
+        <div class="chips-stacked">
+          <span class="chip-full">Compressor</span>
+          <span class="chip-full">Fans</span>
+          <span class="chip-full">Economizer</span>
+        </div>
+      </div>
+      <div class="equipment-dir-item">
+        <div class="equipment-photo-frame">
+          <div class="equipment-placeholder-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div>
+          <span class="equipment-placeholder-label">Image Placeholder</span>
+        </div>
+        <h4 class="title-opt1">Hydronic Pump Stations</h4>
+        <div class="chips-stacked">
+          <span class="chip-full">Seals</span>
+          <span class="chip-full">Impeller</span>
+          <span class="chip-full">Cavitation</span>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-bottom: 12px; font-size: 14px; color: #163865;">Option 2: 1-Line Headings + Reduced Spacing + Single Row 3 Equal Width Chips</h3>
+    <div class="equipment-directory-matrix">
+      <div class="equipment-dir-item">
+        <div class="equipment-photo-frame">
+          <div class="equipment-placeholder-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div>
+          <span class="equipment-placeholder-label">Image Placeholder</span>
+        </div>
+        <h4 class="title-opt1">Water &amp; Air Chillers</h4>
+        <div class="chips-row3">
+          <span class="chip-col3">Bearings</span>
+          <span class="chip-col3">Delta-T</span>
+          <span class="chip-col3">Lubrication</span>
+        </div>
+      </div>
+      <div class="equipment-dir-item">
+        <div class="equipment-photo-frame">
+          <div class="equipment-placeholder-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div>
+          <span class="equipment-placeholder-label">Image Placeholder</span>
+        </div>
+        <h4 class="title-opt1">Variable Refrigerant (VRF)</h4>
+        <div class="chips-row3">
+          <span class="chip-col3">Inverter</span>
+          <span class="chip-col3">Voltage</span>
+          <span class="chip-col3">Refrigerant</span>
+        </div>
+      </div>
+      <div class="equipment-dir-item">
+        <div class="equipment-photo-frame">
+          <div class="equipment-placeholder-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div>
+          <span class="equipment-placeholder-label">Image Placeholder</span>
+        </div>
+        <h4 class="title-opt1">Air Handling Units (AHU)</h4>
+        <div class="chips-row3">
+          <span class="chip-col3">Vibration</span>
+          <span class="chip-col3">Airflow</span>
+          <span class="chip-col3">Filtration</span>
+        </div>
+      </div>
+      <div class="equipment-dir-item">
+        <div class="equipment-photo-frame">
+          <div class="equipment-placeholder-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div>
+          <span class="equipment-placeholder-label">Image Placeholder</span>
+        </div>
+        <h4 class="title-opt1">Industrial Cooling Towers</h4>
+        <div class="chips-row3">
+          <span class="chip-col3">Gearbox</span>
+          <span class="chip-col3">Drives</span>
+          <span class="chip-col3">Water</span>
+        </div>
+      </div>
+      <div class="equipment-dir-item">
+        <div class="equipment-photo-frame">
+          <div class="equipment-placeholder-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div>
+          <span class="equipment-placeholder-label">Image Placeholder</span>
+        </div>
+        <h4 class="title-opt1">Rooftop Packaged Units</h4>
+        <div class="chips-row3">
+          <span class="chip-col3">Compressor</span>
+          <span class="chip-col3">Fans</span>
+          <span class="chip-col3">Economizer</span>
+        </div>
+      </div>
+      <div class="equipment-dir-item">
+        <div class="equipment-photo-frame">
+          <div class="equipment-placeholder-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div>
+          <span class="equipment-placeholder-label">Image Placeholder</span>
+        </div>
+        <h4 class="title-opt1">Hydronic Pump Stations</h4>
+        <div class="chips-row3">
+          <span class="chip-col3">Seals</span>
+          <span class="chip-col3">Impeller</span>
+          <span class="chip-col3">Cavitation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

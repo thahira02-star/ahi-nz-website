@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Full-Width HVAC Blend Refined</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f172a; font-family: 'Montserrat', sans-serif; padding: 40px 0; }
+
+    .container {
+      width: 100%;
+      max-width: 1290px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ==========================================================================
+       SECTION 05 · IMPORTANCE OF FAST, EFFICIENT HVAC REPAIR (FULL-WIDTH AMBIENT)
+       ========================================================================== */
+    .section-importance-showcase {
+      width: 100%;
+      position: relative;
+      background-color: #163865;
+      background-image: linear-gradient(180deg, #163865 0%, #112D52 100%);
+      padding: 42px 0;
+      overflow: hidden;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* Ambient Full-Width Background Layer */
+    .importance-bg-layer {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Photo Positioning & Duotone Filter matching reference */
+    .importance-bg-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 62%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right 18%;
+      display: block;
+      filter: saturate(0.65) brightness(0.88) contrast(1.08);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.35) 18%, black 48%, black 100%);
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.35) 18%, black 48%, black 100%);
+    }
+
+    /* Multi-Stop Feathered Blue Overlay */
+    .importance-bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        #163865 0%,
+        #163865 35%,
+        rgba(22, 56, 101, 0.98) 44%,
+        rgba(22, 56, 101, 0.88) 54%,
+        rgba(22, 56, 101, 0.72) 68%,
+        rgba(22, 56, 101, 0.58) 82%,
+        rgba(22, 56, 101, 0.62) 100%
+      );
+    }
+
+    /* Content Styling */
+    .importance-showcase-content {
+      max-width: 560px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
+    }
+
+    .importance-eyebrow-wrap {
+      margin-bottom: 10px;
+    }
+
+    .importance-eyebrow-text {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      line-height: 1.2;
+      display: inline-block;
+    }
+
+    .importance-showcase-title {
+      font-size: 36px;
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 1.22;
+      letter-spacing: -0.02em;
+      margin: 0 0 12px 0;
+      max-width: 540px;
+    }
+
+    .importance-showcase-desc {
+      font-size: 14px;
+      color: #CBD5E1;
+      line-height: 1.55;
+      margin: 0 0 20px 0;
+      max-width: 540px;
+    }
+
+    .importance-benefits-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      gap: 10px 36px;
+      max-width: 520px;
+    }
+
+    .importance-benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #FFFFFF;
+      line-height: 1.3;
+    }
+
+    .importance-check-icon {
+      width: 16px;
+      height: 16px;
+      stroke: #FFFFFF;
+      stroke-width: 2.5;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="section-importance-showcase" id="importance-section" aria-labelledby="importance-heading">
+    <!-- Ambient Full-Width Background Blend Layer -->
+    <div class="importance-bg-layer" aria-hidden="true">
+      <img src="../Reference files/imp of emergency hvac.jpeg" alt="" class="importance-bg-img">
+      <div class="importance-bg-overlay"></div>
+    </div>
+
+    <div class="container">
+      <div class="importance-showcase-content">
+        <div class="importance-eyebrow-wrap">
+          <span class="importance-eyebrow-text">24/7 NATIONWIDE RESPONSE</span>
+        </div>
+
+        <h2 id="importance-heading" class="importance-showcase-title">
+          The Importance of Fast,<br>Efficient HVAC Repair
+        </h2>
+
+        <p class="importance-showcase-desc">
+          With certified engineers stationed across New Zealand, AHI Carrier delivers 24/7 rapid emergency dispatch, expert diagnostics, and genuine Carrier parts to minimise downtime.
+        </p>
+
+        <!-- 5 Benefit Points (Tick-Mark List) -->
+        <ul class="importance-benefits-list">
+          <li class="importance-benefit-item">
+            <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Minimising Downtime</span>
+          </li>
+          <li class="importance-benefit-item">
+            <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Maintaining Comfort</span>
+          </li>
+          <li class="importance-benefit-item">
+            <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Restoring Performance</span>
+          </li>
+          <li class="importance-benefit-item">
+            <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Preventing Damage</span>
+          </li>
+          <li class="importance-benefit-item">
+            <svg class="importance-check-icon" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Protecting Operations</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
