@@ -144,7 +144,9 @@
     }
 
     /* Base Headings Default */
-    h1, h2, h3, h4, h5, h6 {
+    
+
+    b, strong {
       font-weight: 600;
     }
 
@@ -1019,7 +1021,7 @@
 
     .how-it-works-title {
       font-size: 38px;
-      font-weight: 700;
+      font-weight: 600;
       color: var(--ahi-text-heading);
       letter-spacing: -0.015em;
       line-height: 1.18;
@@ -1114,7 +1116,7 @@
 
     .hiw-step-num {
       font-size: 20px;
-      font-weight: 700;
+      font-weight: 600;
       color: #163865;
       opacity: 0.85;
       min-width: 28px;
@@ -1155,7 +1157,7 @@
 
     .hiw-step-title {
       font-size: 16.5px;
-      font-weight: 700;
+      font-weight: 600;
       color: var(--ahi-text-heading);
       margin: 0 0 3px 0;
       line-height: 1.3;
@@ -1241,133 +1243,18 @@
        ========================================================================== */
     .section-importance-showcase {
       width: 100%;
-      position: relative;
-      background-color: #0E2544;
-      padding: 38px 0;
-      overflow: hidden;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    /* Unblurred technician photo with crisp focus */
-    .section-importance-showcase::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url('Reference files/imp of emergency hvac.jpeg');
-      background-size: cover;
-      background-position: center right;
-      background-repeat: no-repeat;
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    /* Dual Linear Gradient Overlay: Brand Carrier Navy (#163865) transitioning to soft luminous white sheen */
-    .section-importance-showcase::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: 
-        linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0) 45%),
-        linear-gradient(90deg, 
-          #163865 0%, 
-          #163865 40%, 
-          rgba(22, 56, 101, 0.90) 54%, 
-          rgba(22, 56, 101, 0.40) 72%, 
-          rgba(255, 255, 255, 0.12) 88%, 
-          rgba(22, 56, 101, 0.20) 100%
-        );
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .section-importance-showcase .container {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      justify-content: flex-start;
-    }
-
-    .importance-showcase-content {
-      max-width: 780px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      text-align: left;
-    }
-
-    .importance-eyebrow-wrap {
-      margin-bottom: 8px;
-    }
-
-    .importance-eyebrow-text {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 11.5px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      color: #FFFFFF;
-      text-transform: uppercase;
-      line-height: 1.2;
-      display: inline-block;
-    }
-
-    .importance-showcase-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 32px;
-      font-weight: 600;
-      color: #FFFFFF;
-      line-height: 1.2;
-      letter-spacing: -0.015em;
-      margin: 0 0 12px 0;
-      max-width: 560px;
-    }
-
-    .importance-showcase-desc {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 13.5px;
-      color: #CBD5E1;
-      line-height: 1.55;
-      margin: 0 0 18px 0;
-      max-width: 780px;
-    }
-
-    /* 4 Benefit Points (Solid White Circular Badges matching target) */
-    .importance-benefits-list {
-      list-style: none;
       padding: 0;
       margin: 0;
-      display: grid;
-      grid-template-columns: repeat(2, max-content);
-      gap: 12px 36px;
-      max-width: 520px;
+      background: transparent;
+      overflow: hidden;
+      line-height: 0;
     }
 
-    .importance-benefit-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 13px;
-      font-weight: 500;
-      color: #FFFFFF;
-      line-height: 1.3;
-    }
-
-    .importance-check-badge {
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
+    .importance-banner-img {
+      width: 100%;
+      height: auto;
       display: block;
-    }
-
-    .btn-importance-cta svg {
-      width: 16px;
-      height: 16px;
-      transition: transform 0.2s ease;
-    }
-
-    .btn-importance-cta:hover svg {
-      transform: translateX(3px);
+      object-fit: cover;
     }
 
     /* ==========================================================================
@@ -1816,7 +1703,7 @@
 
     .reasons-card-heading {
       font-size: 20px;
-      font-weight: 700;
+      font-weight: 600;
       color: #163865;
       margin: 0;
       letter-spacing: -0.01em;
@@ -1897,7 +1784,7 @@
     .form-panel-top-kicker,
     .form-panel-kicker {
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: 0.14em;
       color: #FFFFFF !important;
       opacity: 1 !important;
@@ -1997,7 +1884,7 @@
 
     .form-contact-sub {
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: 0.06em;
       color: rgba(255, 255, 255, 0.6);
       text-transform: uppercase;
@@ -2181,7 +2068,7 @@
       color: var(--ahi-white);
       border-radius: var(--radius-sm);
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 600;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -2376,7 +2263,7 @@
 
     .parts-toshiba-logo {
       color: var(--ahi-red-brand);
-      font-weight: 800;
+      font-weight: 600;
       font-size: 13px;
       letter-spacing: 0.05em;
     }
@@ -2385,7 +2272,7 @@
       border: 1px solid var(--ahi-red-brand);
       color: var(--ahi-red-brand);
       font-size: 9px;
-      font-weight: 800;
+      font-weight: 600;
       padding: 2px 6px;
       border-radius: 5px;
       letter-spacing: 0.05em;
@@ -2851,7 +2738,7 @@
               <!-- Panel 4: Maintenance & Lifestyle Service (Reference files/Maintenance & Lifestyle Service.png) -->
               <div class="mega-subpanel active" id="panel-maintenance">
                 <ul class="mega-subitems-list">
-                  <li><a href="#planned-maintenance" class="mega-subitem-link">Planned HVAC Maintenance</a></li>
+                  <li><a href="planned-hvac-maintenance.html" class="mega-subitem-link">Planned HVAC Maintenance</a></li>
                   <li><a href="preventative-maintenance.html" class="mega-subitem-link">Preventative Maintenance</a></li>
                   <li><a href="predictive-maintenance.html" class="mega-subitem-link">Predictive Maintenance</a></li>
                   <li><a href="chiller-maintenance.html" class="mega-subitem-link">Chiller Maintenance</a></li>
@@ -3196,55 +3083,8 @@
        Spacing: Exactly 40px vertical spacing (Compact Rhythm)
        Layout: Full-width background image with seamless duotone navy blend
        ========================================================================== -->
-  <section class="section-importance-showcase" id="importance-section" aria-labelledby="importance-heading">
-    <div class="container">
-      <!-- Typographic Hierarchy & Benefit Points -->
-      <div class="importance-showcase-content">
-        <div class="importance-eyebrow-wrap">
-          <span class="importance-eyebrow-text">24/7 NATIONWIDE RESPONSE</span>
-        </div>
-
-        <h2 id="importance-heading" class="importance-showcase-title">
-          The Importance of Fast, Efficient<br>HVAC Repair
-        </h2>
-
-        <p class="importance-showcase-desc">
-          With certified engineers stationed across New Zealand, AHI Carrier delivers 24/7 rapid emergency dispatch, expert diagnostics, and genuine Carrier parts to minimise downtime.
-        </p>
-
-        <!-- 4 Benefit Points (Solid White Circular Badges matching target) -->
-        <ul class="importance-benefits-list">
-          <li class="importance-benefit-item">
-            <svg class="importance-check-badge" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-              <circle cx="10" cy="10" r="10" fill="#FFFFFF"/>
-              <path d="M6 10.2L8.7 13L14.2 7.5" stroke="#163865" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>Minimising Downtime</span>
-          </li>
-          <li class="importance-benefit-item">
-            <svg class="importance-check-badge" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-              <circle cx="10" cy="10" r="10" fill="#FFFFFF"/>
-              <path d="M6 10.2L8.7 13L14.2 7.5" stroke="#163865" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>Maintaining Comfort</span>
-          </li>
-          <li class="importance-benefit-item">
-            <svg class="importance-check-badge" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-              <circle cx="10" cy="10" r="10" fill="#FFFFFF"/>
-              <path d="M6 10.2L8.7 13L14.2 7.5" stroke="#163865" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>Restoring Performance</span>
-          </li>
-          <li class="importance-benefit-item">
-            <svg class="importance-check-badge" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-              <circle cx="10" cy="10" r="10" fill="#FFFFFF"/>
-              <path d="M6 10.2L8.7 13L14.2 7.5" stroke="#163865" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>Preventing Damage</span>
-          </li>
-        </ul>
-      </div>
-    </div>
+  <section class="section-importance-showcase" id="importance-section" aria-label="The Importance of Fast, Efficient HVAC Repair">
+    <img src="Reference files/importance of fast,efficient hvac repair banner.png" alt="The Importance of Fast, Efficient HVAC Repair - 24/7 Nationwide Response" class="importance-banner-img" width="3072" height="822" loading="lazy">
   </section>
 
     <!-- ==========================================================================
@@ -3842,7 +3682,7 @@
             <div class="parts-brands-row" aria-label="Brand Authorisations">
               <svg width="60" height="24" viewBox="0 0 100 40" aria-label="Carrier">
                 <ellipse cx="50" cy="20" rx="46" ry="18" fill="#283389"/>
-                <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Montserrat', cursive, sans-serif" font-style="italic" font-weight="700" font-size="18" fill="#ffffff">Carrier</text>
+                <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Montserrat', cursive, sans-serif" font-style="italic" font-weight="600" font-size="18" fill="#ffffff">Carrier</text>
               </svg>
               <span class="parts-toshiba-logo">TOSHIBA</span>
               <span class="parts-totaline-logo">TOTALINE</span>
