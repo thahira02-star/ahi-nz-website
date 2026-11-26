@@ -1,4 +1,4 @@
-# Update Section 01 card names and content in predictive-maintenance.html
+﻿# Update Section 01 card names and content in predictive-maintenance.html
 $ErrorActionPreference = "Stop"
 
 $filePath = "final output\predictive-maintenance.html"
@@ -220,10 +220,10 @@ $oldHtmlNorm = $oldHtml.Replace("`r`n", "`n")
 $newHtmlNorm = $newHtml.Replace("`r`n", "`n")
 
 if (-not $contentNorm.Contains($oldCssNorm)) {
-    throw "Could not find oldCss in $filePath"
+  throw "Could not find oldCss in $filePath"
 }
 if (-not $contentNorm.Contains($oldHtmlNorm)) {
-    throw "Could not find oldHtml in $filePath"
+  throw "Could not find oldHtml in $filePath"
 }
 
 $contentNorm = $contentNorm.Replace($oldCssNorm, $newCssNorm)
