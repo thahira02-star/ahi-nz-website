@@ -226,6 +226,12 @@
       opacity: 0.85;
     }
 
+    .utility-divider {
+      width: 1px;
+      height: 14px;
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+
     .utility-link svg.dropdown-caret {
       margin-left: 2px;
     }
@@ -286,7 +292,7 @@
     .utility-right-cluster {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 20px;
     }
 
     .utility-contact-item {
@@ -303,7 +309,7 @@
     }
 
     .utility-contact-item.phone {
-      font-weight: 400;
+      font-weight: 500;
     }
 
     .utility-contact-item:hover {
@@ -390,6 +396,7 @@
       align-items: center;
       gap: 6px;
       cursor: pointer;
+      text-decoration: none;
     }
 
     .nav-chevron {
@@ -699,14 +706,16 @@
     .nav-cta-btn {
       background-color: var(--ahi-navy-primary);
       color: var(--ahi-white);
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 600;
-      height: 38px;
-      padding: 0 20px;
+      height: 44px;
+      padding: 0 24px;
       border-radius: var(--radius-sm);
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      text-decoration: none;
+      transition: background-color 0.18s ease;
     }
 
     .nav-cta-btn:hover {
@@ -3583,8 +3592,17 @@
         padding-right: 20px;
       }
       .top-utility-bar {
-        display: none;
-      }
+      background-color: #163865;
+      height: 54px;
+      width: 100%;
+      color: #FFFFFF;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 50;
+      font-family: 'Montserrat', sans-serif;
+    }
       .main-navigation-bar {
         height: 72px;
       }
@@ -4043,7 +4061,7 @@
       background-color: #1EBE5D;
       transform: translateY(-1px);
     }
-              /* ==========================================================================
+                          /* ==========================================================================
        AHI RESPONSIVE OVERRIDES (ISOLATED <= 1180PX — 1536PX DESKTOP UNCHANGED)
        ========================================================================== */
     @media (max-width: 1180px) {
@@ -4181,6 +4199,22 @@
       .industries-grid-6col {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
         gap: 20px;
+        align-items: stretch !important;
+      }
+      .calm-hero-card,
+      .calm-card {
+        height: 100%;
+        box-sizing: border-box;
+      }
+      .calm-hero-card {
+        grid-column: span 1 !important;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 28px 24px;
+      }
+      .calm-ops-grid > .calm-card:nth-child(2) {
+        grid-column: span 1 !important;
       }
       .how-it-works-process {
         grid-template-columns: 1fr;
@@ -4216,6 +4250,25 @@
       .footer-parts-card {
         min-height: auto !important;
         padding: 28px 24px !important;
+      }
+      .equipment-directory-matrix {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+      }
+      .equipment-dir-item {
+        min-height: 260px !important;
+        height: 260px !important;
+      }
+      .equipment-photo-frame {
+        height: 100% !important;
+        width: 100% !important;
+        inset: 0 !important;
+      }
+      .equipment-item-body {
+        padding: 16px 14px !important;
+      }
+      .equipment-item-title {
+        white-space: normal !important;
       }
     }
 
@@ -4271,7 +4324,8 @@
         gap: 10px;
       }
       .form-grid-2col {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 16px;
       }
       .form-left-panel,
       .form-right-panel {
@@ -4284,6 +4338,14 @@
       .ahi-chatbot-bubble {
         max-width: 240px;
         font-size: 13px;
+      }
+      .equipment-directory-matrix {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+      }
+      .equipment-dir-item {
+        min-height: 250px !important;
+        height: 250px !important;
       }
     }
 
@@ -4311,7 +4373,8 @@
       .industries-grid-6col,
       .equipment-directory-matrix,
       .dashboard-category-tabs,
-      .facility-grid-3x2 {
+      .facility-grid-3x2,
+      .form-grid-2col {
         grid-template-columns: 1fr !important;
         gap: 16px;
       }
@@ -4354,6 +4417,16 @@
       .industry-point-item,
       .case-pillar-label {
         white-space: normal;
+      }
+      .equipment-dir-item {
+        min-height: 220px !important;
+        height: 220px !important;
+      }
+      .equipment-item-body {
+        padding: 18px 16px !important;
+      }
+      .equipment-item-title {
+        font-size: 15.5px !important;
       }
     }
 
@@ -4495,16 +4568,14 @@
       <div class="utility-left-cluster">
         <div class="utility-global-wrap">
           <a href="#nz" class="utility-link" aria-label="New Zealand region selector" aria-haspopup="true">
-            <svg width="18" height="12" viewBox="0 0 24 16" style="border-radius:2px;flex-shrink:0;" aria-hidden="true">
-              <rect width="24" height="16" fill="#012169"/>
-              <path d="M0 0L12 8M12 0L0 8" stroke="#FFFFFF" stroke-width="1.6"/>
-              <path d="M0 0L12 8M12 0L0 8" stroke="#C8102E" stroke-width="0.9"/>
-              <path d="M6 0V8M0 4H12" stroke="#FFFFFF" stroke-width="2.4"/>
-              <path d="M6 0V8M0 4H12" stroke="#C8102E" stroke-width="1.4"/>
-              <circle cx="18.5" cy="3.2" r="1.05" fill="#C8102E" stroke="#FFFFFF" stroke-width="0.45"/>
-              <circle cx="15.8" cy="6.6" r="1.05" fill="#C8102E" stroke="#FFFFFF" stroke-width="0.45"/>
-              <circle cx="21" cy="6" r="0.95" fill="#C8102E" stroke="#FFFFFF" stroke-width="0.45"/>
-              <circle cx="18.5" cy="12.2" r="1.15" fill="#C8102E" stroke="#FFFFFF" stroke-width="0.45"/>
+            <svg width="18" height="12" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;" aria-hidden="true">
+              <rect x="0.75" y="0.75" width="22.5" height="14.5" rx="1.5" stroke-width="1.4"/>
+              <path d="M1 1L11.5 8M11.5 1L1 8" stroke-width="1"/>
+              <path d="M6.25 1V8M1 4.5H11.5" stroke-width="1.3"/>
+              <circle cx="18" cy="3.5" r="0.85" fill="currentColor" stroke="none"/>
+              <circle cx="15.5" cy="6.8" r="0.85" fill="currentColor" stroke="none"/>
+              <circle cx="20.5" cy="6.2" r="0.8" fill="currentColor" stroke="none"/>
+              <circle cx="18" cy="12" r="0.95" fill="currentColor" stroke="none"/>
             </svg>
             <span>New Zealand</span>
             <svg class="utility-global-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">

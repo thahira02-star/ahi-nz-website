@@ -137,6 +137,22 @@ $responsiveCss = @'
       .industries-grid-6col {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
         gap: 20px;
+        align-items: stretch !important;
+      }
+      .calm-hero-card,
+      .calm-card {
+        height: 100%;
+        box-sizing: border-box;
+      }
+      .calm-hero-card {
+        grid-column: span 1 !important;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 28px 24px;
+      }
+      .calm-ops-grid > .calm-card:nth-child(2) {
+        grid-column: span 1 !important;
       }
       .how-it-works-process {
         grid-template-columns: 1fr;
@@ -172,6 +188,25 @@ $responsiveCss = @'
       .footer-parts-card {
         min-height: auto !important;
         padding: 28px 24px !important;
+      }
+      .equipment-directory-matrix {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+      }
+      .equipment-dir-item {
+        min-height: 260px !important;
+        height: 260px !important;
+      }
+      .equipment-photo-frame {
+        height: 100% !important;
+        width: 100% !important;
+        inset: 0 !important;
+      }
+      .equipment-item-body {
+        padding: 16px 14px !important;
+      }
+      .equipment-item-title {
+        white-space: normal !important;
       }
     }
 
@@ -227,7 +262,8 @@ $responsiveCss = @'
         gap: 10px;
       }
       .form-grid-2col {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 16px;
       }
       .form-left-panel,
       .form-right-panel {
@@ -240,6 +276,14 @@ $responsiveCss = @'
       .ahi-chatbot-bubble {
         max-width: 240px;
         font-size: 13px;
+      }
+      .equipment-directory-matrix {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+      }
+      .equipment-dir-item {
+        min-height: 250px !important;
+        height: 250px !important;
       }
     }
 
@@ -267,7 +311,8 @@ $responsiveCss = @'
       .industries-grid-6col,
       .equipment-directory-matrix,
       .dashboard-category-tabs,
-      .facility-grid-3x2 {
+      .facility-grid-3x2,
+      .form-grid-2col {
         grid-template-columns: 1fr !important;
         gap: 16px;
       }
@@ -310,6 +355,16 @@ $responsiveCss = @'
       .industry-point-item,
       .case-pillar-label {
         white-space: normal;
+      }
+      .equipment-dir-item {
+        min-height: 220px !important;
+        height: 220px !important;
+      }
+      .equipment-item-body {
+        padding: 18px 16px !important;
+      }
+      .equipment-item-title {
+        font-size: 15.5px !important;
       }
     }
 
